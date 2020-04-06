@@ -1,0 +1,94 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: snow;
+}
+.wrapper{
+    width: 80%;
+    height: 1000px;
+    background-color: antiquewhite;
+    margin: 0 auto;
+}
+.heading{
+    margin: 0px;
+    width: 100%;
+    height: 90px;
+    background-color: snow;
+    margin: 0 auto;
+}
+.heading ul{
+    margin-left: 40px;
+    float: left;
+    list-style: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+.heading li{
+    padding-left: 10px;
+    display: inline;
+    font-size: 20px;
+}
+.heading_nav{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    height: 30px;
+    position: relative;
+}
+.heading_title{
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: burlywood;
+}
+.heading a:link,a:visited{
+    font-weight: bold;
+    color: rgb(165, 162, 162);
+    text-align: center;
+    padding: 6px;
+    text-decoration: none;
+}
+.heading a:hover,a:active{
+    color: dimgray;
+}
+.heading_img img{
+    width: 26px;
+    height: 26px;
+    border-radius: 30px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    float: right;
+}
+.heading_spotlight form{
+    float: right;
+    width: 100px;
+    height: 26px;
+    position: relative;
+    margin-right: 100px;
+}
+form input{
+    height: 26px;
+    border-radius: 30px;
+}
+.body{
+    height: auto;
+    width: auto;
+    padding: 30px;
+}
+.body_title h3{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+}
+.body_title p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.footing{
+    padding: 20px;
+    text-shadow: grey;
+    text-align: center;
+    font-size: 10px;
+    color: darkgrey;
+}

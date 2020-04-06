@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>块元素</title>
+    <style>
+        hgroup{
+            border: 1px solid #ccc;
+        }
+        figure{
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 20px;
+        }
+        figcaption{
+            text-align: center;
+        }
+        dialog{
+            border: 1px solid #ccc;
+        }
+        dialog dt{color: darkgrey}
+        dialog dd{color: dimgray}
+    </style>
+</head>
+<body>
+<hgroup>
+    <h1>一级标题区域</h1>
+    <h2>二级标题区域</h2>
+</hgroup>
+<section>
+    <h3>图文展示区域</h3>
+    <figure>
+        <img src="image/A%20(1).ico">
+        <figcaption><p>图标</p></figcaption>
+    </figure>
+    <figure>
+        <img src="image/A%20(2).ico">
+        <figcaption><p>图标</p></figcaption>
+    </figure>
+    <figure>
+        <img src="image/A%20(3).ico">
+        <figcaption><p>图标</p></figcaption>
+    </figure>
+</section>
+<section>
+    <h3>留言区域</h3>
+    <dialog open>
+        <dl>
+            <dt>张山</dt>
+            <dd>请问图标的意思是什么？</dd>
+            <dt>李四</dt>
+            <dd>请问图标的意思是什么？</dd>
+            <dt>王五</dt>
+            <dd>请问图标的意思是什么？</dd>
+        </dl>
+    </dialog>
+</section>
+<h3>以下是代码引用区域</h3>
+<code>
+    <dl>
+        <dt>张山</dt>
+        <dd>请问图标的意思是什么？</dd>
+        <dt>李四</dt>
+        <dd>请问图标的意思是什么？</dd>
+        <dt>王五</dt>
+        <dd>请问图标的意思是什么？</dd>
+    </dl>
+</code>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行内元素</title>
+    <style>
+        time{color: red}
+        mark{background: yellow; color: red;}
+    </style>
+</head>
+<body>
+<h2>meter element</h2>
+磁盘剩余空间：<br/>
+<p>C盘： <meter value="0.5" max="1" min="0" title="50%"></meter>%</p>
+<p>D盘： <meter min="0" max="100" value="10" title="10%"></meter>%</p>
+<p>E盘： <meter min="0" max="10" value="3" title="3/10"></meter>%</p>
+
+<h2>time element</h2>
+<p><time>6:00</time>下班</p>
+<p><time datetime="2016/5/1">劳动节</time>放假三天</p>
+<p><time datetime="2016-6-3T8:30">8点半</time>有演出</p>
+
+<h2>mark element</h2>
+<p><mark>html5</mark>学习：高薪资</p>
+<p><mark>html5</mark>是下代html</p>
+
+<h2>progress element</h2>
+加载进度：<progress></progress> <br/>
+已完成工作进度：<progress max="100" value="50"></progress>
+</body>
+</html>

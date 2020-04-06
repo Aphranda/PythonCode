@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background-size: auto;
+    background: url("/static/blog/image/ghost.jpg") no-repeat !important;
+    background-size: 100% 100% !important;
+    background-attachment: fixed !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    width: 20%;
+    height: auto;
+    margin: 15% auto 0;
+    text-align: center;
+    background: #00000060;
+    padding: 20px 50px;
+}
+#form i{
+    font-size: 18px;
+    color: #ffffff;
+}
+h1{
+    color: #f4e1da;
+}
+
+#form .username{
+    margin-top: 10px;
+}
+#form .password{
+    margin-top: 10px;
+}
+
+#form input{
+    width: 180px;
+    border: 0;
+    font-size: 18px;
+    border-bottom: 2px solid white;
+    padding: 5px 10px;
+    background: none;
+    color: #fff;
+}
+#form button{
+    margin-top: 15px;
+    width: 150px;
+    height: 30px;
+    border: 0;
+    border-radius: 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #141529 0%, #fca594 100%);
+    cursor: pointer;
+}

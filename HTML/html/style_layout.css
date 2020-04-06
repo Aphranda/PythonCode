@@ -1,0 +1,29 @@
+header,nav,article,footer{
+    width: 1000px;
+    margin: 0 auto;
+    border: 1px solid #956;
+}
+header{
+    height: 100px;
+}
+nav{
+    height: 40px;
+}
+article{
+    height: 400px;
+}
+section{
+    width: 70%;
+    height: 395px;
+    background-color: #999;
+    float: left;
+}
+aside{
+    width: 30%;
+    height: 395px;
+    background-color: #eee;
+    float: right;
+}
+footer{
+    height: 70px;
+}

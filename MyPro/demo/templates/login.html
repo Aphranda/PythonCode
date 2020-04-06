@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/blog/login.css"/>
+    <link rel="stylesheet" href="/static/blog/font/css/font-awesome.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+<form action="{% url "blog:Log" %}" method="POST"> {# 模板语法<!--反向解析 action="{% url "Log" %}--> #}
+    {% csrf_token %}
+    <h1>Login</h1>
+    <div class="username">
+        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+        <input v-model="username" type="text" placeholder={{ username }} name="user"> {# 模板语法{{  }} #}
+    </div>
+    <div class="password">
+        <i class="fa fa-key" aria-hidden="true"></i>
+        <input v-model="password" type="password" placeholder={{ password }} name="password">
+    </div>
+    <button type="submit">login</button>
+</form>
+{% include "advertise.html" %}
+</body>
+</html>

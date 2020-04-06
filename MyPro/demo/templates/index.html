@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>index</title>
+{% endblock %}
+
+{% block con %}
+            <h1>Index</h1>
+            <p>{{ name }}</p> <br/>
+            <p>{{ i }}</p> <br/>
+            <p>{{ l }}</p> <br/>
+            <p>{{ info }}</p> <br/>
+            <p>{{ b }}</p> <br/>
+            <p>{{ alex }}</p> <br/>
+            <p>{{ person_list }}</p> <br/>
+            <hr>
+            <h3>深度查询</h3>
+            <p>{{ l.1 }}</p>
+            <p>{{ info.name }}</p>
+            <p>{{ alex.age }}</p>
+            <p>{{ person_list.1.age }}</p>
+
+            <h3>过滤器</h3>
+            {{ now|date:"Y-m-d" }}
+            <p>{{ person|default:"数据为空" }}</p>
+            <p>{{ file_size|filesizeformat }}</p>
+            <p>{{ string|truncatechars:9 }}</p>
+            <p>{{ string|truncatewords_html:3 }}</p>
+            <p>{{ link|safe }}</p>
+            <p>{{ l.1|add:100 }}</p>
+            <p>{{ link|upper }}</p>
+
+            <hr>
+            <h3>标签</h3>
+            <h4>for标签</h4>
+            {% for i in l %}
+                <p>{{ i }}</p>
+            {% endfor %}
+
+            {% for i in info %}
+                <p>{{ i }}</p>
+            {% endfor %}
+
+            {% for person in person_list %}
+                <p>{{ forloop.counter }} {{ person.name }} {{ person.age }}</p>
+                {% empty %}
+                <p>列表为空</p>
+            {% endfor %}
+            <hr>
+            <h3>if标签</h3>
+            {% if user %}
+                <p>
+                <a href="">hi {{ user.name }}</a>
+                <a href="">注销</a>
+                </p>
+            {% else %}
+                <p>
+                <a href="">登录</a>
+                <a href="">注册</a>
+                </p>
+            {% endif %}
+
+            <hr>
+            <h3>with标签</h3>
+            {% with person_list.1.name as name %}
+            {{ name }}
+            {% endwith %}
+
+            <hr>
+            <h3>自定义过滤器</h3>
+            {% load my_tag_filter %}   <!--# load 加载自定义过滤器-->
+            <p>{{ i|multi_fliter:20 }}</p>
+            <h3>自定义标签</h3>        <!--# 自定义标签-->
+            <p>{% multi_tag 7 8 %}</p>
+
+            {% if i|multi_fliter:20 > 100 %}
+                <p>100</p>
+            {% else %}
+                <p>{{ i }}</p>
+            {% endif %}
+{% endblock %}

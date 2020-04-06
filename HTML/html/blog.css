@@ -1,0 +1,45 @@
+*{margin: 0; padding: 0;}
+
+body{
+    background: beige;
+}
+header,nav,.con,footer{
+    width: 826px;
+    border: 1px solid;
+    margin: 0 auto;
+}
+header{
+    height: 324px;
+}
+.hgroup{
+    background: #ccc;
+    width: 424px;
+}
+nav{
+    height: 85px;
+}
+nav ul{
+    list-style: none;
+    float: right;
+}
+nav ul li{
+    float: left;
+}
+.con{
+    min-height: 500px;
+}
+.blog-list{
+    width: 75%;
+    float: left;
+    min-height: 300px;
+    background: #ccc;
+}
+aside{
+    width: 25%;
+    float: right;
+    min-height: 300px;
+    background: #999;
+}
+footer{
+    height: 102px;
+}

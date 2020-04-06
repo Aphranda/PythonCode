@@ -1,0 +1,11 @@
+{
+    "python.pythonPath": "D:\\Anaconda\\envs\\python\\python.exe",
+    "editor.parameterHints": true,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+    },
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
+}

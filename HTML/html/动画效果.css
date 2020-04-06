@@ -1,0 +1,25 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+div{
+    margin: 300px auto;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: anim 5s infinite alternate-reverse;
+    background-color: darkred;
+    transition: width 2s,height 2s,transform 2s;
+}
+@keyframes anim{
+    0%{background: red;left: 0px;top:0px }
+    25%{background: yellow;left: 200px;top:0px;}
+    50%{background: blue;left: 200px;top:200px;}
+    75%{background: green;left: 0px;top:200px;}
+    100%{background: #515;left: 0px;top:0px;}
+}
+div:hover{
+    width: 200px;
+    height: 200px;
+    transform: rotate(360deg);
+}

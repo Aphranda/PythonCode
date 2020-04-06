@@ -1,0 +1,11 @@
+body{
+    background-image: url("/HTML/image/A\ \(13\).ico");
+    background-repeat: no-repeat;
+    /* background-position: 50% 300px; */
+    background-attachment: fixed;
+    background-size: 100px 100px;
+}
+p{
+    width: 150px;
+    padding: 10px;
+}
