@@ -122,7 +122,7 @@ class Exchange(object):
         return self.res
     
     def select_data(self):
-        self.resS = []
+        self.resS = ["Down:DDM信息"]
         data = self.res
         right_words = "Arista Networks"
         for i in data:
@@ -156,35 +156,31 @@ class Exchange(object):
         while True:
             word = self.show_menu()
             if word == '1':
-                print(data['2'])
                 self.write_data(word)
                 self.receive_data()
             elif word == '2':
-                print(data['2'])
                 self.write_data(word)
                 self.receive_data()
                 self.select_data()
             elif word == '3':
-                print(data['3'])
                 self.write_data(word)
                 self.receive_data()
                 self.save_data()
             elif word == '4':
-                print(data['4'])
                 self.write_data(word)
                 self.receive_data()
                 self.position_data()
             elif word == '5':
-                self.file = input("请输入单号")
+                self.file = input("请输入单号：")
             elif word == '0':
                 if self.ser.isOpen:
                     self.close_port()
-                    print("测试退出中...")
+                    print("测试退出...")
                     time.sleep(0.5)
-                    print('退出完成')
+                    print('退出完成...')
                     break
             else:
-                print('请正确输入')
+                print('输入错误 请正确输入')
 
 
 def main():
