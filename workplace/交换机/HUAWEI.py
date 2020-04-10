@@ -32,6 +32,7 @@ class Exchange(object):
              5.文件名称创建
              6.订单单号输入
              7.开启读取线程
+             8.退出拼包
 
         #=========================#
             """
@@ -93,44 +94,67 @@ class Exchange(object):
                     '\n',
                     r'N',
                     r'system-view',
-                    r'int 25ge1/0/1',
+                    r'interface',
                     r'port mode 10G',
-                    r'N',
+                    r'Y',
                     r'undo portswitch',
-                    r'ip address 192.168.3.2.24',
+                    r'ip address 192.168.3.2 24',
                     r'commit',
-                    r'ping -c 10000 192.168.x.x'
+                    r'ping -c 135 192.168.3.2'
                 ],
             "3":
                 [
                     # 25G 环路拼包
                     '\n',
                     r'N',
-                    r'system-view'
-                    r'int 25ge1/0/1',
+                    r'system-view',
+                    r'interface',
                     r'undo portswitch',
-                    r'ip address 192.168.3.2.24',
+                    r'ip address 192.168.4.2 24',
                     r'commit',
-                    r'ping -c 10000 192.168.x.x'
+                    r'ping -c 135 192.168.4.2'
                 ],
             "4":
                 [
                     '\n',
                     r'N',
-                    r'display interface 25GE1/0/1 transceiver verbose'
+                    r'display interface transceiver verbose'
                 ],
-            # "7":
-            # [
-            #     '\n'
-            # ]
+            "7":
+                [
+                    chr(0x03),
+                    r'quit',
+                    r'quit'
+                ]
         }
         self.data = huawei
         return self.data
 
     def write_data(self, word):
+        key_words = "interface"
         data = self.order_data()
         for i in data[word]:
             time.sleep(0.5)
+            if key_words in i:
+                a = i.split('interface', 1)
+                if len(a[1]) == 0:
+                    try:
+                        i = "interface" + " " + self.box[-1]
+                    except:
+                        print(
+                            """
+                            ===========时间超时，请重新登录然后拔插模块========
+                            """
+                        )
+                if len(a[1]) != 0:
+                    try:
+                        i = a[0] + "interface" + " " + self.box[-1] + a[1]
+                    except:
+                        print(
+                            """
+                            ===========时间超时，请重新登录然后拔插模块========
+                            """
+                        )
             print(i)
             self.ser.write((i + '\n').encode())
 
@@ -141,7 +165,7 @@ class Exchange(object):
         while len(self.res[-1]) != 0:
             data = self.ser.readline()
             self.res.append(data)
-            # print(self.res[-1])
+            print(self.res[-1])
         return self.res
 
     def back_box(self):
@@ -153,6 +177,14 @@ class Exchange(object):
                 name_one = key_line.split(key_words, 1)[1].split(",", 1)[0].split("=", 1)[1]
                 self.box.append(name_one)
                 print(name_one)
+        try:
+            print(self.box[-1])
+        except:
+            print(
+                """
+                ===========时间超时，请重新登录然后拔插模块========
+                """
+            )
 
     def select_data(self):
         self.resS = ["Down:DDM信息"]
@@ -174,7 +206,7 @@ class Exchange(object):
         print('丢包数量:' + str(len(wrong_data)))
 
     def save_data(self):
-        data = self.resS + self.res  # C:\\Users\\Aphanda\\Desktop\\test C:\\Users\\Administrator\\Desktop\\data
+        data = self.res  # C:\\Users\\Aphanda\\Desktop\\test C:\\Users\\Administrator\\Desktop\\data
         with open(f'C:\\Users\\Aphanda\\Desktop\\test\\{self.filedir}\\{self.file}.txt', mode='a+') as f:
             for j in data:
                 f.write(str(j) + "\n")
@@ -201,7 +233,7 @@ class Exchange(object):
             elif word == '4':
                 self.write_data(word)
                 self.receive_data()
-                # self.position_data()
+                self.save_data()
             elif word == '5':
                 self.filedir = input(
                     "请输入文件名：")  # C:\\Users\\Aphanda\\Desktop\\test C:\\Users\\Administrator\\Desktop\\data
@@ -216,11 +248,13 @@ class Exchange(object):
             elif word == '7':
                 self.receive_data()
                 self.back_box()
+            elif word == '8':
+                self.write_data("7")
+                self.receive_data()
             elif word == '0':
                 if self.ser.isOpen:
                     self.close_port()
                     print("测试退出...")
-                    time.sleep(0.5)
                     print('退出完成...')
                     break
             else:
