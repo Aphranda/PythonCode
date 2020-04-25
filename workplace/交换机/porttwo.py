@@ -29,7 +29,7 @@ class Exchange(object):
         return input("请输入选择序号：")
 
     def open_port(self):
-        self.ser = serial.Serial(self.com, 9600, timeout=0.5)
+        self.ser = serial.Serial(self.com, 57600, timeout=0.5)
 
     def close_port(self):
         self.ser.close()

@@ -1,0 +1,98 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'd:\PythonCode\code\workplace\截图识别\S.ui'
+#
+# Created by: PyQt5 UI code generator 5.13.0
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_Form(object):
+    def setupUi(self, Form):
+        Form.setObjectName("Form")
+        Form.resize(377, 432)
+        self.frame = QtWidgets.QFrame(Form)
+        self.frame.setGeometry(QtCore.QRect(10, 220, 351, 61))
+        self.frame.setFrameShape(QtWidgets.QFrame.Box)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame.setLineWidth(3)
+        self.frame.setObjectName("frame")
+        self.pushButton_file = QtWidgets.QPushButton(self.frame)
+        self.pushButton_file.setGeometry(QtCore.QRect(20, 10, 141, 41))
+        self.pushButton_file.setObjectName("pushButton_file")
+        self.pushButton_OK = QtWidgets.QPushButton(self.frame)
+        self.pushButton_OK.setGeometry(QtCore.QRect(190, 10, 141, 41))
+        self.pushButton_OK.setObjectName("pushButton_OK")
+        self.frame_2 = QtWidgets.QFrame(Form)
+        self.frame_2.setGeometry(QtCore.QRect(10, 10, 351, 201))
+        self.frame_2.setFrameShape(QtWidgets.QFrame.Box)
+        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_2.setLineWidth(3)
+        self.frame_2.setObjectName("frame_2")
+        self.textBrowser = QtWidgets.QTextBrowser(self.frame_2)
+        self.textBrowser.setGeometry(QtCore.QRect(15, 10, 321, 181))
+        self.textBrowser.setObjectName("textBrowser")
+        self.frame_3 = QtWidgets.QFrame(Form)
+        self.frame_3.setGeometry(QtCore.QRect(10, 290, 351, 131))
+        self.frame_3.setFrameShape(QtWidgets.QFrame.Box)
+        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_3.setLineWidth(3)
+        self.frame_3.setObjectName("frame_3")
+        self.horizontalSlider = QtWidgets.QSlider(self.frame_3)
+        self.horizontalSlider.setGeometry(QtCore.QRect(20, 20, 281, 22))
+        self.horizontalSlider.setOrientation(QtCore.Qt.Horizontal)
+        self.horizontalSlider.setObjectName("horizontalSlider")
+        self.horizontalSlider_2 = QtWidgets.QSlider(self.frame_3)
+        self.horizontalSlider_2.setGeometry(QtCore.QRect(20, 50, 281, 22))
+        self.horizontalSlider_2.setOrientation(QtCore.Qt.Horizontal)
+        self.horizontalSlider_2.setObjectName("horizontalSlider_2")
+        self.horizontalSlider_3 = QtWidgets.QSlider(self.frame_3)
+        self.horizontalSlider_3.setGeometry(QtCore.QRect(20, 80, 281, 22))
+        self.horizontalSlider_3.setOrientation(QtCore.Qt.Horizontal)
+        self.horizontalSlider_3.setObjectName("horizontalSlider_3")
+        self.horizontalSlider_4 = QtWidgets.QSlider(self.frame_3)
+        self.horizontalSlider_4.setGeometry(QtCore.QRect(20, 110, 281, 22))
+        self.horizontalSlider_4.setOrientation(QtCore.Qt.Horizontal)
+        self.horizontalSlider_4.setObjectName("horizontalSlider_4")
+        self.verticalLayoutWidget = QtWidgets.QWidget(self.frame_3)
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(310, 20, 31, 101))
+        self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.label = QtWidgets.QLabel(self.verticalLayoutWidget)
+        self.label.setMaximumSize(QtCore.QSize(30, 30))
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
+        self.label.setObjectName("label")
+        self.verticalLayout.addWidget(self.label)
+        self.label_2 = QtWidgets.QLabel(self.verticalLayoutWidget)
+        self.label_2.setMaximumSize(QtCore.QSize(30, 30))
+        self.label_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_2.setObjectName("label_2")
+        self.verticalLayout.addWidget(self.label_2)
+        self.label_3 = QtWidgets.QLabel(self.verticalLayoutWidget)
+        self.label_3.setMaximumSize(QtCore.QSize(30, 30))
+        self.label_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_3.setObjectName("label_3")
+        self.verticalLayout.addWidget(self.label_3)
+        self.label_4 = QtWidgets.QLabel(self.verticalLayoutWidget)
+        self.label_4.setMaximumSize(QtCore.QSize(30, 30))
+        self.label_4.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_4.setObjectName("label_4")
+        self.verticalLayout.addWidget(self.label_4)
+
+        self.retranslateUi(Form)
+        QtCore.QMetaObject.connectSlotsByName(Form)
+
+    def retranslateUi(self, Form):
+        _translate = QtCore.QCoreApplication.translate
+        Form.setWindowTitle(_translate("Form", "Form"))
+        self.pushButton_file.setText(_translate("Form", "文件选择"))
+        self.pushButton_OK.setText(_translate("Form", "确认识别"))
+        self.label.setText(_translate("Form", "X"))
+        self.label_2.setText(_translate("Form", "Y"))
+        self.label_3.setText(_translate("Form", "X"))
+        self.label_4.setText(_translate("Form", "Y"))

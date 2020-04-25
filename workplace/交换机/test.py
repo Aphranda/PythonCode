@@ -1,6 +1,4 @@
-a = b'show inter ether 33 tran det'
-b = b'tran'
-if b in a:
-    print("ok")
-else:
-    print('bad')
+import random
+for i in range(100):
+    a = random.randint(1, 100)
+    print(a)

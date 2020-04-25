@@ -57,6 +57,7 @@ class Exchange(object):
         port_name = str(input('输入数字选择端口：'))
         final_com = port_box[port_name][0:4]
         return final_com
+        # return 'COM7'
 
     def open_port(self):
         com = self.choice_port()
@@ -111,9 +112,9 @@ class Exchange(object):
                     r'system-view',
                     r'interface',
                     r'undo portswitch',
-                    r'ip address 192.168.3.2 24',
+                    r'ip address 192.168.7.2 24',
                     r'commit',
-                    r'ping -c 135 192.168.3.2'
+                    r'ping -c 135 192.168.7.2'
 
                 ],
             "4":
@@ -271,7 +272,10 @@ class Exchange(object):
                 self.receive_data()
                 self.back_box()
             elif word == '9':
-                self.write_data("7")
+                try:
+                    self.write_data("9")
+                except:
+                    print("非拼包场合，不建议使用退出拼包")
                 self.receive_data()
             elif word == '0':
                 if self.ser.isOpen:

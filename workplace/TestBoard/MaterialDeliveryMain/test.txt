@@ -1,0 +1,1 @@
+Optional Laser Temp High Alarm  Optional Laser Temp Low Alarm  Optional Laser Temp High Warning  Optional Laser Temp Low Warning  Optional TEC Current High Alarm  Optional TEC Current Low Alarm  Optional TEC Current High Warning  Optional TEC Current Low Warning

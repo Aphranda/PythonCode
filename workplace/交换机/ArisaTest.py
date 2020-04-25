@@ -1,15 +1,20 @@
 import serial
 import serial.tools.list_ports
 import time
+import os
 import datetime
 
 
 class Exchange(object):
 
     def __init__(self):
+        self.ddm = []
         self.res = ["1"]
         self.file = "QC"
-        self.time_now = datetime.datetime.now()
+        self.filedir = 'QC' # C:\\Users\\Aphanda\\Desktop\\test C:\\Users\\Administrator\\Desktop\\data
+        os.chdir("C:\\Users\\Aphanda\\Desktop\\test")
+        if not os.path.exists(self.filedir):
+            os.makedirs(self.filedir)
         pass
 
     @staticmethod
@@ -23,7 +28,8 @@ class Exchange(object):
              2.查看端口信息                     
              3.读SFP端口DDM    
              4.开启环路拼包
-             5.订单单号输入
+             5.文件名称创建
+             6.订单单号输入
                               
         #=========================#
             """
@@ -46,7 +52,6 @@ class Exchange(object):
         port_name = str(input('输入数字选择端口：'))
         final_com = port_box[port_name][0:4]
         return final_com
-
 
     def open_port(self):
         com = self.choice_port()
@@ -113,6 +118,7 @@ class Exchange(object):
             self.ser.write((i + '\n').encode())
 
     def receive_data(self):
+        self.time_now = datetime.datetime.now()
         all_time = self.time_now.strftime("%Y-%m-%d %H:%M:%S")
         self.res = [f"========up:AOC信息==={all_time}===Down:DDM信息========="]
         while len(self.res[-1]) != 0:
@@ -120,17 +126,53 @@ class Exchange(object):
             self.res.append(data)
             print(self.res[-1])
         return self.res
-    
-    def select_data(self):
-        self.resS = ["Down:DDM信息"]
+
+    def login(self):
+        key_words = "Arista100g-5"
         data = self.res
-        right_words = "Arista Networks"
+        for i in data:
+            if key_words in str(i):
+                print("登录成功")
+            else:
+                print("登录失败，重新登录")
+    
+    def select_ddm(self):
+        p = 0
+        power = ["温度：", "电压：", "电流：", "TX_P：", "RX_P：", "温度：", "电压：", "电流：", "TX_P：", "RX_P："]
+        key_words = "Et"
+        data = self.res
+        for i in data:
+            if key_words in str(i):
+                self.ddm.append(i)
+        for n in self.ddm:
+            tem = str(n).replace("b", '').replace("'", '').replace("\\", '').replace("rn", '').replace(' ', 'X')
+            tem = tem.replace("XX", "#").replace("##", "X").replace("X#", "X").replace("XX", "X").replace("XX", "X")
+            res_tem = tem.split("X", 7)
+            tem_one = float(res_tem[1])
+            tem_two = float(res_tem[2])
+            tem_three = float(res_tem[3])
+            tem_four = float(res_tem[4])
+            tem_five = float(res_tem[5])
+            if tem_one < tem_three and tem_one > tem_four:
+                print(res_tem[0] + ": " + power[p] + res_tem[1] + "     DDM在Alarm范围之内——————————————————————Alarm:PASS")
+            elif tem_one < tem_two and tem_one > tem_five:
+                print(res_tem[0] + ": " + power[p] + res_tem[1] + "     DDM在Warm范围之内——————————————————————Warm:PASS")
+            else:
+                print(res_tem[0] + ": " + power[p] + res_tem[1] + "     ————————————————NO——————————————————————NO:FAIL")
+            p += 1
+
+    def select_data(self):
+        self.resS = ["#=============================分割线=============================#"]
+        data = self.res
+        key_words_01 = "33"
+        key_words_02 = "34"
         for i in data:
             print(i)
-            if right_words in str(i):
+            if key_words_01 in str(i):
+                self.resS.append(i)
+            if key_words_02 in str(i):
                 self.resS.append(i)
         return self.resS
-
 
     def position_data(self):
         data = self.res
@@ -142,10 +184,13 @@ class Exchange(object):
         print('丢包数量:' + str(len(wrong_data)))
 
     def save_data(self):
-        data = self.resS + self.res # C:\\Users\\Aphanda\\Desktop\\test C:\\Users\\Administrator\\Desktop\\data
-        with open(f'C:\\Users\\Aphanda\\Desktop\\test\\{self.file}.txt', mode='a+') as f:
-            for j in data:
-                f.write(str(j) + "\n")
+        try:
+            data = self.resS + self.res  # C:\\Users\\Aphanda\\Desktop\\test C:\\Users\\Administrator\\Desktop\\data
+            with open(f'C:\\Users\\Aphanda\\Desktop\\test\\{self.filedir}\\{self.file}.txt', mode='a+') as f:
+                for j in data:
+                    f.write(str(j) + "\n")
+        except:
+            print("========================存储失败=========================" + "\n" + "=================端口信息和DDM都需要测===================")
 
     def send_data(self):
         self.open_port()
@@ -156,8 +201,12 @@ class Exchange(object):
         while True:
             word = self.show_menu()
             if word == '1':
-                self.write_data(word)
-                self.receive_data()
+                try:
+                    self.write_data(word)
+                    self.receive_data()
+                    self.login()
+                except:
+                    print("登录失败")
             elif word == '2':
                 self.write_data(word)
                 self.receive_data()
@@ -165,12 +214,21 @@ class Exchange(object):
             elif word == '3':
                 self.write_data(word)
                 self.receive_data()
+                self.select_ddm()
                 self.save_data()
             elif word == '4':
                 self.write_data(word)
                 self.receive_data()
                 self.position_data()
             elif word == '5':
+                self.filedir = input("请输入文件名：") # C:\\Users\\Aphanda\\Desktop\\test C:\\Users\\Administrator\\Desktop\\data
+                os.chdir("C:\\Users\\Aphanda\\Desktop\\test")
+                if not os.path.exists(self.filedir):
+                    os.makedirs(self.filedir)
+                    os.chdir(self.filedir)
+                else:
+                    os.chdir(self.filedir)
+            elif word == '6':
                 self.file = input("请输入单号：")
             elif word == '0':
                 if self.ser.isOpen:
