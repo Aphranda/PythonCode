@@ -39,19 +39,48 @@ cache01 = [
 
 ]
 
+
+class WorkThread(QtCore.QThread):
+    receiver_data = QtCore.pyqtSignal()
+    show_data = QtCore.pyqtSignal()
+    delete_data = QtCore.pyqtSignal()
+
+    def run(self):
+        try:
+            while True:
+                self.receiver_data.emit()
+                print(time.thread_time())
+                self.sleep(1)
+                self.show_data.emit()
+                print(time.thread_time())
+                # break
+        except Exception as e:
+            print(e)
+
+
 class MyWindow(QMainWindow, Ui_MainWindow):
     def __init__(self, parent=None):
         super(MyWindow, self).__init__(parent)
         self.setupUi(self)
         self.remianwindow  = Remindwindow()
+        self.workThread = WorkThread()
         self.core = Core()
         self.cache = []
         # self.core.opposition_data(cache01)
         self.oppsition = 0
-        self.pushButton_exit.clicked.connect(self.digital)
         self.pushButton_sweep_com.clicked.connect(self.on_pushbutton_sweep)
         self.pushButton_link_com.clicked.connect(self.on_pushbutton_link)
-        self.pushButton_link_com.clicked.connect(lambda: self.write_register(self.core.register_a2_sfp))
+        # 一次测试流
+        # self.pushButton_link_com.clicked.connect(lambda: self.write_register(self.core.register_a2_sfp))
+        # self.pushButton_exit.clicked.connect(self.digital)
+        # 线程测试流
+        # self.workThread.receiver_data.connect(lambda: self.write_register(self.core.register_a2_sfp))
+        try:
+            self.workThread.receiver_data.connect(lambda: self.write_register(self.core.register_a2_sfp))
+            self.workThread.show_data.connect(self.digital)
+            self.pushButton_exit.clicked.connect(self.work)
+        except Exception as e:
+            self.remianwindow.remindshow(e)
 
     def on_pushbutton_exit(self):
         """窗口关闭"""
@@ -69,6 +98,9 @@ class MyWindow(QMainWindow, Ui_MainWindow):
         except Exception as e:
             self.remianwindow.remindshow("数据发送失败" + str(e))
         self.core.opposition_data(self.cache)
+
+    def test(self):
+        self.core.opposition_data(cache01)
 
     def on_pushbutton_sweep(self):
         """扫描端口"""
@@ -93,140 +125,149 @@ class MyWindow(QMainWindow, Ui_MainWindow):
             self.remianwindow.remindshow(self.serials.name)
             print(self.serials.name)
 
-
     def digital(self):
         try:
-            print(self.core.threshold_dict)
+            # print('温度：' + str(self.core.threshold_dict['Temperature']))
+            # print('电压' + str(self.core.threshold_dict['Vcc']))
+            # print('电流' + str(self.core.threshold_dict['Bias']))
+            # print('TXP' + str(self.core.threshold_dict['TX Power']))
+            # print('RXP' + str(self.core.threshold_dict['RX Power']))
             self.lineEdit_Temp.setText(str(round(self.core.threshold_dict['Temperature'], 3)))
             self.lineEdit_VCC.setText(str(round(self.core.threshold_dict['Vcc'], 3)))
             self.lineEdit_Bias.setText(str(round(self.core.threshold_dict['Bias'], 3)))
             self.lineEdit_TxP.setText(str(round(self.core.threshold_dict['TX Power'], 3)))
             self.lineEdit_RxP.setText(str(round(self.core.threshold_dict['RX Power'], 3)))
         except Exception as e:
-            self.remianwindow.remindshow(str(e))
+            print(e)
+            #  self.remianwindow.remindshow(str(e))
 
         # 温度门限颜色显示
         try:
-            if self.core.threshold_dict['Temperature'] <= self.core.threshold_dict['Temp High Alarm']:
+            if self.core.threshold_dict['Temperature'] < self.core.threshold_dict['Temp High Alarm']:
                 self.lineEdit_Temp_1.setStyleSheet("background-color:green")
                 self.oppsition += 1
             else:
                 self.lineEdit_Temp_1.setStyleSheet("background-color:red")
-            if self.core.threshold_dict['Temperature'] <= self.core.threshold_dict['Temp High Warning']:
+            if self.core.threshold_dict['Temperature'] < self.core.threshold_dict['Temp High Warning']:
                 self.lineEdit_Temp_2.setStyleSheet("background-color:green")
                 self.oppsition += 1
             else:
                 self.lineEdit_Temp_2.setStyleSheet("background-color:red")
-            if self.core.threshold_dict['Temperature'] >= self.core.threshold_dict['Temp Low Alarm']:
+            if self.core.threshold_dict['Temperature'] > self.core.threshold_dict['Temp Low Alarm']:
                 self.lineEdit_Temp_3.setStyleSheet("background-color:green")
                 self.oppsition += 1
             else:
                 self.lineEdit_Temp_3.setStyleSheet("background-color:red")
-            if self.core.threshold_dict['Temperature'] >= self.core.threshold_dict['Temp Low Warning']:
+            if self.core.threshold_dict['Temperature'] > self.core.threshold_dict['Temp Low Warning']:
                 self.lineEdit_Temp_4.setStyleSheet("background-color:green")
                 self.oppsition += 1
             else:
                 self.lineEdit_Temp_4.setStyleSheet("background-color:red")
         except Exception as e:
-            self.remianwindow.remindshow(str(e))
+            print(e)
+            # self.remianwindow.remindshow(str(e))
 
         # VCC门限颜色显示
         try:
-            if self.core.threshold_dict['Vcc'] <= self.core.threshold_dict['Voltage High Alarm']:
+            if self.core.threshold_dict['Vcc'] < self.core.threshold_dict['Voltage High Alarm']:
                 self.lineEdit_VCC_1.setStyleSheet("background-color:green")
                 self.oppsition += 1
             else:
                 self.lineEdit_VCC_1.setStyleSheet("background-color:red")
-            if self.core.threshold_dict['Vcc'] <= self.core.threshold_dict['Voltage High Warning']:
+            if self.core.threshold_dict['Vcc'] < self.core.threshold_dict['Voltage High Warning']:
                 self.lineEdit_VCC_2.setStyleSheet("background-color:green")
                 self.oppsition += 1
             else:
                 self.lineEdit_VCC_2.setStyleSheet("background-color:red")
-            if self.core.threshold_dict['Vcc'] >= self.core.threshold_dict['Voltage Low Alarm']:
+            if self.core.threshold_dict['Vcc'] > self.core.threshold_dict['Voltage Low Alarm']:
                 self.lineEdit_VCC_3.setStyleSheet("background-color:green")
                 self.oppsition += 1
             else:
                 self.lineEdit_VCC_3.setStyleSheet("background-color:red")
-            if self.core.threshold_dict['Vcc'] >= self.core.threshold_dict['Voltage Low Warning']:
+            if self.core.threshold_dict['Vcc'] > self.core.threshold_dict['Voltage Low Warning']:
                 self.lineEdit_VCC_4.setStyleSheet("background-color:green")
                 self.oppsition += 1
             else:
                 self.lineEdit_VCC_4.setStyleSheet("background-color:red")
         except Exception as e:
-            self.remianwindow.remindshow(str(e))
+            print(e)
+            # self.remianwindow.remindshow(str(e))
         
         # Bias门限颜色
         try:
-            if self.core.threshold_dict['Bias'] <= self.core.threshold_dict['Bias High Alarm']:
+            if self.core.threshold_dict['Bias'] < self.core.threshold_dict['Bias High Alarm']:
                 self.lineEdit_Bias_1.setStyleSheet("background-color:green")
                 self.oppsition += 1
             else:
                 self.lineEdit_Bias_1.setStyleSheet("background-color:red")
-            if self.core.threshold_dict['Bias'] <= self.core.threshold_dict['Bias High Warning']:
+            if self.core.threshold_dict['Bias'] < self.core.threshold_dict['Bias High Warning']:
                 self.lineEdit_Bias_2.setStyleSheet("background-color:green")
                 self.oppsition += 1
             else:
                 self.lineEdit_Bias_2.setStyleSheet("background-color:red")
-            if self.core.threshold_dict['Bias'] >= self.core.threshold_dict['Bias Low Alarm']:
+            if self.core.threshold_dict['Bias'] > self.core.threshold_dict['Bias Low Alarm']:
                 self.lineEdit_Bias_3.setStyleSheet("background-color:green")
                 self.oppsition += 1
             else:
                 self.lineEdit_Bias_3.setStyleSheet("background-color:red")
-            if self.core.threshold_dict['Bias'] >= self.core.threshold_dict['Bias Low Warning']:
+            if self.core.threshold_dict['Bias'] > self.core.threshold_dict['Bias Low Warning']:
                 self.lineEdit_Bias_4.setStyleSheet("background-color:green")
                 self.oppsition += 1
             else:
                 self.lineEdit_Bias_4.setStyleSheet("background-color:red")
         except Exception as e:
-            self.remianwindow.remindshow(str(e))
+            print(e)
+            #  self.remianwindow.remindshow(str(e))
 
         try:
-            if self.core.threshold_dict['TX Power'] <= self.core.threshold_dict['TX Power High Alarm']:
+            if self.core.threshold_dict['TX Power'] < self.core.threshold_dict['TX Power High Alarm']:
                 self.lineEdit_TxP_1.setStyleSheet("background-color:green")
                 self.oppsition += 1
             else:
                 self.lineEdit_TxP_1.setStyleSheet("background-color:red")
-            if self.core.threshold_dict['TX Power'] <= self.core.threshold_dict['TX Power High Warning']:
+            if self.core.threshold_dict['TX Power'] < self.core.threshold_dict['TX Power High Warning']:
                 self.lineEdit_TxP_2.setStyleSheet("background-color:green")
                 self.oppsition += 1
             else:
                 self.lineEdit_TxP_2.setStyleSheet("background-color:red")
-            if self.core.threshold_dict['TX Power'] >= self.core.threshold_dict['TX Power Low Alarm']:
+            if self.core.threshold_dict['TX Power'] > self.core.threshold_dict['TX Power Low Alarm']:
                 self.lineEdit_TxP_3.setStyleSheet("background-color:green")
                 self.oppsition += 1
             else:
                 self.lineEdit_TxP_3.setStyleSheet("background-color:red")
-            if self.core.threshold_dict['TX Power'] >= self.core.threshold_dict['TX Power Low Warning']:
+            if self.core.threshold_dict['TX Power'] > self.core.threshold_dict['TX Power Low Warning']:
                 self.lineEdit_TxP_4.setStyleSheet("background-color:green")
                 self.oppsition += 1
             else:
                 self.lineEdit_TxP_4.setStyleSheet("background-color:red")
         except Exception as e:
-            self.remianwindow.remindshow(str(e))
+            print(e)
+            #  self.remianwindow.remindshow(str(e))
 
         try:
-            if self.core.threshold_dict['RX Power'] <= self.core.threshold_dict['RX Power High Alarm']:
+            if self.core.threshold_dict['RX Power'] < self.core.threshold_dict['RX Power High Alarm']:
                 self.lineEdit_RxP_1.setStyleSheet("background-color:green")
                 self.oppsition += 1
             else:
                 self.lineEdit_RxP_1.setStyleSheet("background-color:red")
-            if self.core.threshold_dict['RX Power'] <= self.core.threshold_dict['RX Power High Warning']:
+            if self.core.threshold_dict['RX Power'] < self.core.threshold_dict['RX Power High Warning']:
                 self.lineEdit_RxP_2.setStyleSheet("background-color:green")
                 self.oppsition += 1
             else:
                 self.lineEdit_RxP_2.setStyleSheet("background-color:red")
-            if self.core.threshold_dict['RX Power'] >= self.core.threshold_dict['RX Power Low Alarm']:
+            if self.core.threshold_dict['RX Power'] > self.core.threshold_dict['RX Power Low Alarm']:
                 self.lineEdit_RxP_3.setStyleSheet("background-color:green")
                 self.oppsition += 1
             else:
                 self.lineEdit_RxP_3.setStyleSheet("background-color:red")
-            if self.core.threshold_dict['RX Power'] >= self.core.threshold_dict['RX Power Low Warning']:
+            if self.core.threshold_dict['RX Power'] > self.core.threshold_dict['RX Power Low Warning']:
                 self.lineEdit_RxP_4.setStyleSheet("background-color:green")
                 self.oppsition += 1
             else:
                 self.lineEdit_RxP_4.setStyleSheet("background-color:red")
         except Exception as e:
-            self.remianwindow.remindshow(str(e))
+            print(e)
+            #  self.remianwindow.remindshow(str(e))
 
         try:
             if self.core.threshold_dict['OLT'] <= self.core.threshold_dict['Optional Laser Temp High Alarm']:
@@ -250,7 +291,8 @@ class MyWindow(QMainWindow, Ui_MainWindow):
             else:
                 self.lineEdit_OLT_4.setStyleSheet("background-color:red")
         except Exception as e:
-            self.remianwindow.remindshow(str(e))
+            print(e)
+            #  self.remianwindow.remindshow(str(e))
 
         try:
             if self.core.threshold_dict['OTC'] <= self.core.threshold_dict['Optional TEC Current High Alarm']:
@@ -274,7 +316,8 @@ class MyWindow(QMainWindow, Ui_MainWindow):
             else:
                 self.lineEdit_OTC_4.setStyleSheet("background-color:red")
         except Exception as e:
-            self.remianwindow.remindshow(str(e))
+            print(e)
+            #  self.remianwindow.remindshow(str(e))
 
         try:
             if self.oppsition == 28:
@@ -282,9 +325,19 @@ class MyWindow(QMainWindow, Ui_MainWindow):
             else:
                 self.lineEdit_INIT.setStyleSheet("background-color:red")
         except Exception as e:
-            self.remianwindow.remindshow(str(e))
-        self.cache = []
-            
+            print(e)
+            #  self.remianwindow.remindshow(str(e))
+
+        del self.core.threshold_0_39[:]
+        del self.core.threshold_40_55[:]
+        del self.core.present_96_105[:]
+        del self.core.optional_106_109[:]
+        del self.cache[:]
+        self.core.threshold_dict = {}
+
+    def work(self):
+        self.workThread.start()
+
 
 class Remindwindow(QtWidgets.QDialog, Ui_Remind):
     def __init__(self, parent=None):

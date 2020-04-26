@@ -107,24 +107,7 @@ class Core(object):
             "92": "3",
             "95": "1",
             "96": "10",
-            "106": "4",
-            "110": "1",
-            "111": "1",
-            "112": "2",
-            "114": "1",
-            "115": "1",
-            "116": "2",
-            "118": "2",
-            "120": "7",
-            "127": "1",
-            "128": "120",
-            "248": "8",
-            "126": "4",
-            "130": "1",
-            "131": "1",
-            "132": "41",
-            "173": "83"
-
+            "106": "4"
         }
         self.register_a0_qsfp = {}
         self.register_a2_qsfp = {}
@@ -188,7 +171,6 @@ class Core(object):
         else:
             return -(res_h + res_l)
 
-
     @staticmethod
     def threshold_decode(data: list, box: list):
         """门限解码"""
@@ -217,7 +199,6 @@ class Core(object):
             box[n] = self.scale_v(data[2*i], data[2*i+1])/500
         return box
 
-
     def match_p(self, name: list, data: list, box: dict):
         """功率储存门限"""
         for i, n in enumerate(name):
@@ -229,7 +210,6 @@ class Core(object):
         for i, n in enumerate(name):
             box[n] = self.scale_e(data[2*i], data[2*i+1])/500
         return box
-    
 
     def opposition_data(self, data):
         """解码公式"""
@@ -266,14 +246,13 @@ class Core(object):
         self.match_c(aw_thresholds[8:12], self.threshold_0_39[16:24], self.threshold_dict)
         # 功率数据匹配提取
         self.match_p(aw_thresholds[12:20], self.threshold_0_39[24:40], self.threshold_dict)
-        print(self.threshold_0_39[24:40])
+        # print(self.threshold_0_39[24:40])
         # 激光器温度匹配提取
         self.match_t(optional_aw_thresholds[0:4], self.threshold_40_55[0:8], self.threshold_dict)
         # TEC电流匹配提取
         self.match_e(optional_aw_thresholds[4:8], self.threshold_40_55[8:16], self.threshold_dict)
         # print(self.threshold_0_39[16:24])
         
-
         # 实际温度匹配提取
         self.match_t(present_name[0:1], self.present_96_105[0:2], self.threshold_dict)
         # 实际电压匹配提取
@@ -283,16 +262,25 @@ class Core(object):
         # 实际功率匹配提取
         self.match_p(present_name[3:4], self.present_96_105[6:8], self.threshold_dict)
         self.match_p(present_name[4:5], self.present_96_105[8:10], self.threshold_dict)
-        print(self.present_96_105[6:8])
+        # print(self.present_96_105[6:8])
         # olt 匹配提取
         self.match_t(optional_name[0:1], self.optional_106_109[0:2], self.threshold_dict)
         # TEC电流匹配提取
         self.match_e(optional_name[1:2], self.optional_106_109[2:4], self.threshold_dict)
-        print(self.threshold_dict)
-        for i in self.threshold_dict:
-            print(i + " : " + str(self.threshold_dict[i]))
-        print(self.threshold_dict["Temperature"])
+        # print(self.threshold_dict)
+        # for i in self.threshold_dict:
+        #     print(i + " : " + str(self.threshold_dict[i]))
+        # print(self.threshold_dict["Temperature"])
         return self.threshold_dict
+
+    # def clear_data(self):
+    #     del self.threshold_0_39[:]
+    #     del self.threshold_40_55[:]
+    #     del self.present_96_105[:]
+    #     del self.optional_106_109[:]
+    #     print(self.threshold_dict)
+    #     self.threshold_dict = {}
+    #     print(self.threshold_dict)
 
 
 # def main():
