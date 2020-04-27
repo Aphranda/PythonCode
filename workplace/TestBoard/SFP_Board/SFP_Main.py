@@ -324,6 +324,7 @@ class MyWindow(QMainWindow, Ui_MainWindow):
                 self.lineEdit_INIT.setStyleSheet("background-color:green")
             else:
                 self.lineEdit_INIT.setStyleSheet("background-color:red")
+            self.oppsition = 0
         except Exception as e:
             print(e)
             #  self.remianwindow.remindshow(str(e))
