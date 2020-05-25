@@ -4,6 +4,7 @@ import time
 import os
 import datetime
 import threading
+import random
 
 
 class Exchange(object):
@@ -57,6 +58,7 @@ class Exchange(object):
         port_name = str(input('输入数字选择端口：'))
         final_com = port_box[port_name][0:4]
         return final_com
+        # return 'COM7'
 
     def open_port(self):
         com = self.choice_port()
@@ -105,15 +107,15 @@ class Exchange(object):
                 ],
             "3":
                 [
-                    # 100G 环路拼包
+                    # 25G 环路拼包
                     '\n',
                     r'N',
                     r'system-view',
                     r'interface',
                     r'undo portswitch',
-                    r'ip address 192.168.3.2 24',
+                    r'ip address 192.168.9.2 24',
                     r'commit',
-                    r'ping -c 135 192.168.3.2'
+                    r'ping -c 135 192.168.9.2'
 
                 ],
             "4":
@@ -146,6 +148,11 @@ class Exchange(object):
 
     def write_data(self, word):
         key_words = "interface"
+        key_words_2 = "address"
+        key_words_3 = "135"
+        ip_3 = random.randint(1, 200)
+        ip_4 = random.randint(1, 200)
+        ip_address = f"192.168.{ip_3}.{ip_4}"
         data = self.order_data()
         for i in data[word]:
             time.sleep(0.5)
@@ -163,16 +170,28 @@ class Exchange(object):
                 if len(a[1]) != 0:
                     try:
                         i = a[0] + "interface" + " " + self.box[-1] + a[1] + \
-                            '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + \
+                            '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + \
                             '\t' + \
                             a[0] + "interface" + " " + self.basket[-1] + a[1] + \
-                            '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n'
+                            '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' + '\n' '\n' + '\n' + '\n' 
                     except:
                         print(
                             """
                             ===========时间超时，请重新登录然后拔插模块========
                             """
                         )
+            if key_words_2 in i:
+                b = i.split("address")
+                try:
+                    i = b[0] + "address" + " " + ip_address + " " + "24"
+                except:
+                    print("ERROR")
+            if key_words_3 in i:
+                c = i.split("135")
+                try:
+                    i = c[0] + "135" + " " + ip_address
+                except:
+                    print("ERROR")
             print(i)
             self.ser.write((i + '\n').encode())
 
@@ -258,7 +277,7 @@ class Exchange(object):
                 self.save_data()
             elif word == '6':
                 self.filedir = input(
-                    "请输入文件名：")  # C:\\Users\\Aphanda\\Desktop\\test C:\\Users\\Administrator\\Desktop\\data
+                    "请输入文件名：")  # C:\\Users\\Aphanda\\Desktop\\test C:\\Users\\aoc-cs-008\\Desktop\\data
                 os.chdir("C:\\Users\\Aphanda\\Desktop\\test")
                 if not os.path.exists(self.filedir):
                     os.makedirs(self.filedir)
@@ -271,7 +290,10 @@ class Exchange(object):
                 self.receive_data()
                 self.back_box()
             elif word == '9':
-                self.write_data("7")
+                try:
+                    self.write_data("9")
+                except:
+                    print("非拼包场合，不建议使用退出拼包")
                 self.receive_data()
             elif word == '0':
                 if self.ser.isOpen:

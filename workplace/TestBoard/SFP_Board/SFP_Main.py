@@ -49,10 +49,8 @@ class WorkThread(QtCore.QThread):
         try:
             while True:
                 self.receiver_data.emit()
-                print(time.thread_time())
-                self.sleep(1)
+                self.msleep(860)
                 self.show_data.emit()
-                print(time.thread_time())
                 # break
         except Exception as e:
             print(e)
@@ -70,17 +68,18 @@ class MyWindow(QMainWindow, Ui_MainWindow):
         self.oppsition = 0
         self.pushButton_sweep_com.clicked.connect(self.on_pushbutton_sweep)
         self.pushButton_link_com.clicked.connect(self.on_pushbutton_link)
+        self.pushButton_exit.clicked.connect(self.on_pushbutton_exit)
         # 一次测试流
-        # self.pushButton_link_com.clicked.connect(lambda: self.write_register(self.core.register_a2_sfp))
+        # self.pushButton_link_com.clicked.connect(lambda: self.write_register_a2(self.core.register_a2_sfp))
         # self.pushButton_exit.clicked.connect(self.digital)
         # 线程测试流
-        # self.workThread.receiver_data.connect(lambda: self.write_register(self.core.register_a2_sfp))
+        # self.workThread.receiver_data.connect(lambda: self.write_register_a2(self.core.register_a2_sfp))
         try:
             self.workThread.receiver_data.connect(lambda: self.write_register(self.core.register_a2_sfp))
             self.workThread.show_data.connect(self.digital)
-            self.pushButton_exit.clicked.connect(self.work)
+            self.pushButton_OK.clicked.connect(self.work)
         except Exception as e:
-            self.remianwindow.remindshow(e)
+            print(e)
 
     def on_pushbutton_exit(self):
         """窗口关闭"""
@@ -132,6 +131,7 @@ class MyWindow(QMainWindow, Ui_MainWindow):
             # print('电流' + str(self.core.threshold_dict['Bias']))
             # print('TXP' + str(self.core.threshold_dict['TX Power']))
             # print('RXP' + str(self.core.threshold_dict['RX Power']))
+            print(self.core.threshold_dict)
             self.lineEdit_Temp.setText(str(round(self.core.threshold_dict['Temperature'], 3)))
             self.lineEdit_VCC.setText(str(round(self.core.threshold_dict['Vcc'], 3)))
             self.lineEdit_Bias.setText(str(round(self.core.threshold_dict['Bias'], 3)))
@@ -322,6 +322,8 @@ class MyWindow(QMainWindow, Ui_MainWindow):
         try:
             if self.oppsition == 28:
                 self.lineEdit_INIT.setStyleSheet("background-color:green")
+            elif self.oppsition == 26:
+                self.lineEdit_INIT.setStyleSheet("background-color:yellow")
             else:
                 self.lineEdit_INIT.setStyleSheet("background-color:red")
             self.oppsition = 0

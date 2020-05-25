@@ -1,0 +1,196 @@
+try:
+        #     print(self.core.threshold_dict)
+        #     self.lineEdit_Temp.setText(str(round(self.core.threshold_dict['Temperature'], 3)))
+        #     self.lineEdit_VCC.setText(str(round(self.core.threshold_dict['Vcc'], 3)))
+        #     self.lineEdit_Bias.setText(str(round(self.core.threshold_dict['Bias'], 3)))
+        #     self.lineEdit_TxP.setText(str(round(self.core.threshold_dict['TX Power'], 3)))
+        #     self.lineEdit_RxP.setText(str(round(self.core.threshold_dict['RX Power'], 3)))
+        # except Exception as e:
+        #     print(e)
+        #
+        # # 温度门限颜色显示
+        # try:
+        #     if self.core.threshold_dict['Temperature'] < self.core.threshold_dict['Temp High Alarm']:
+        #         self.lineEdit_Temp_1.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_Temp_1.setStyleSheet("background-color:red")
+        #     if self.core.threshold_dict['Temperature'] < self.core.threshold_dict['Temp High Warning']:
+        #         self.lineEdit_Temp_2.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_Temp_2.setStyleSheet("background-color:red")
+        #     if self.core.threshold_dict['Temperature'] > self.core.threshold_dict['Temp Low Alarm']:
+        #         self.lineEdit_Temp_3.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_Temp_3.setStyleSheet("background-color:red")
+        #     if self.core.threshold_dict['Temperature'] > self.core.threshold_dict['Temp Low Warning']:
+        #         self.lineEdit_Temp_4.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_Temp_4.setStyleSheet("background-color:red")
+        # except Exception as e:
+        #     print(e)
+        #
+        # # VCC门限颜色显示
+        # try:
+        #     if self.core.threshold_dict['Vcc'] < self.core.threshold_dict['Voltage High Alarm']:
+        #         self.lineEdit_VCC_1.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_VCC_1.setStyleSheet("background-color:red")
+        #     if self.core.threshold_dict['Vcc'] < self.core.threshold_dict['Voltage High Warning']:
+        #         self.lineEdit_VCC_2.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_VCC_2.setStyleSheet("background-color:red")
+        #     if self.core.threshold_dict['Vcc'] > self.core.threshold_dict['Voltage Low Alarm']:
+        #         self.lineEdit_VCC_3.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_VCC_3.setStyleSheet("background-color:red")
+        #     if self.core.threshold_dict['Vcc'] > self.core.threshold_dict['Voltage Low Warning']:
+        #         self.lineEdit_VCC_4.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_VCC_4.setStyleSheet("background-color:red")
+        # except Exception as e:
+        #     print(e)
+        #
+        # # Bias门限颜色
+        # try:
+        #     if self.core.threshold_dict['Bias'] < self.core.threshold_dict['Bias High Alarm']:
+        #         self.lineEdit_Bias_1.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_Bias_1.setStyleSheet("background-color:red")
+        #     if self.core.threshold_dict['Bias'] < self.core.threshold_dict['Bias High Warning']:
+        #         self.lineEdit_Bias_2.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_Bias_2.setStyleSheet("background-color:red")
+        #     if self.core.threshold_dict['Bias'] > self.core.threshold_dict['Bias Low Alarm']:
+        #         self.lineEdit_Bias_3.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_Bias_3.setStyleSheet("background-color:red")
+        #     if self.core.threshold_dict['Bias'] > self.core.threshold_dict['Bias Low Warning']:
+        #         self.lineEdit_Bias_4.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_Bias_4.setStyleSheet("background-color:red")
+        # except Exception as e:
+        #     print(e)
+        #
+        # # TxPower门限显示
+        # try:
+        #     if self.core.threshold_dict['TX Power'] < self.core.threshold_dict['TX Power High Alarm']:
+        #         self.lineEdit_TxP_1.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_TxP_1.setStyleSheet("background-color:red")
+        #     if self.core.threshold_dict['TX Power'] < self.core.threshold_dict['TX Power High Warning']:
+        #         self.lineEdit_TxP_2.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_TxP_2.setStyleSheet("background-color:red")
+        #     if self.core.threshold_dict['TX Power'] > self.core.threshold_dict['TX Power Low Alarm']:
+        #         self.lineEdit_TxP_3.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_TxP_3.setStyleSheet("background-color:red")
+        #     if self.core.threshold_dict['TX Power'] > self.core.threshold_dict['TX Power Low Warning']:
+        #         self.lineEdit_TxP_4.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_TxP_4.setStyleSheet("background-color:red")
+        # except Exception as e:
+        #     print(e)
+        #
+        # # PxPower 颜色显示
+        # try:
+        #     if self.core.threshold_dict['RX Power'] < self.core.threshold_dict['RX Power High Alarm']:
+        #         self.lineEdit_RxP_1.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_RxP_1.setStyleSheet("background-color:red")
+        #     if self.core.threshold_dict['RX Power'] < self.core.threshold_dict['RX Power High Warning']:
+        #         self.lineEdit_RxP_2.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_RxP_2.setStyleSheet("background-color:red")
+        #     if self.core.threshold_dict['RX Power'] > self.core.threshold_dict['RX Power Low Alarm']:
+        #         self.lineEdit_RxP_3.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_RxP_3.setStyleSheet("background-color:red")
+        #     if self.core.threshold_dict['RX Power'] > self.core.threshold_dict['RX Power Low Warning']:
+        #         self.lineEdit_RxP_4.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_RxP_4.setStyleSheet("background-color:red")
+        # except Exception as e:
+        #     print(e)
+        #
+        # # 激光温度颜色显示
+        # try:
+        #     if self.core.threshold_dict['OLT'] <= self.core.threshold_dict['Optional Laser Temp High Alarm']:
+        #         self.lineEdit_OLT_1.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_OLT_1.setStyleSheet("background-color:red")
+        #     if self.core.threshold_dict['OLT'] <= self.core.threshold_dict['Optional Laser Temp High Warning']:
+        #         self.lineEdit_OLT_2.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_OLT_2.setStyleSheet("background-color:red")
+        #     if self.core.threshold_dict['OLT'] >= self.core.threshold_dict['Optional Laser Temp Low Alarm']:
+        #         self.lineEdit_OLT_3.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_OLT_3.setStyleSheet("background-color:red")
+        #     if self.core.threshold_dict['OLT'] >= self.core.threshold_dict['Optional Laser Temp Low Warning']:
+        #         self.lineEdit_OLT_4.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_OLT_4.setStyleSheet("background-color:red")
+        # except Exception as e:
+        #     print(e)
+        #
+        # # 激光电流颜色显示
+        # try:
+        #     if self.core.threshold_dict['OTC'] <= self.core.threshold_dict['Optional TEC Current High Alarm']:
+        #         self.lineEdit_OTC_1.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_OTC_1.setStyleSheet("background-color:red")
+        #     if self.core.threshold_dict['OTC'] <= self.core.threshold_dict['Optional TEC Current High Warning']:
+        #         self.lineEdit_OTC_2.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_OTC_2.setStyleSheet("background-color:red")
+        #     if self.core.threshold_dict['OTC'] >= self.core.threshold_dict['Optional TEC Current Low Alarm']:
+        #         self.lineEdit_OTC_3.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_OTC_3.setStyleSheet("background-color:red")
+        #     if self.core.threshold_dict['OTC'] >= self.core.threshold_dict['Optional TEC Current Low Warning']:
+        #         self.lineEdit_OTC_4.setStyleSheet("background-color:green")
+        #         self.opposition += 1
+        #     else:
+        #         self.lineEdit_OTC_4.setStyleSheet("background-color:red")
+        # except Exception as e:
+        #     print(e)
+        #
+        # # 最终通过项颜色显示
+        # try:
+        #     if self.opposition == 28:
+        #         self.lineEdit_INIT.setStyleSheet("background-color:green")
+        #     elif self.opposition == 26:
+        #         self.lineEdit_INIT.setStyleSheet("background-color:yellow")
+        #     else:
+        #         self.lineEdit_INIT.setStyleSheet("background-color:red")
+        #     self.opposition = 0
+        # except Exception as e:
+        #     print(e)

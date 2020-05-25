@@ -1437,9 +1437,9 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>10</y>
+        <y>140</y>
         <width>111</width>
-        <height>251</height>
+        <height>121</height>
        </rect>
       </property>
       <property name="minimumSize">
@@ -1456,6 +1456,31 @@
       </property>
       <property name="text">
        <string>退出测试</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_OK">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>111</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>41</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>黑体</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>开始测试</string>
       </property>
      </widget>
     </widget>

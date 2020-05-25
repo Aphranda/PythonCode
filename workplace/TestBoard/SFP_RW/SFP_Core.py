@@ -1,104 +1,16 @@
 import threading
 import math
 
-cache02 = [
-    [b'#\x03$'],
-    [b'#\x04$'],
-    [b'#\x07$'],
-    [b'#\x10\x00\x00\x00\x00\x00\x00\x00$'],
-    [b'#\x06$'],
-    [b'#g$'],
-    [b'#\x00$'],
-    [b'#\x00$'],
-    [b'#\x00$'],
-    [b'#\x00$'],
-    [b'#\x00$'],
-    [b'#\x03$'],
-    [b'#\x00$'],
-    [b'#CISCO           $'],
-    [b'#\x00$'],
-    [b'#$\x00\x00$'],
-    [b'#SFP-10G-AOC-03M $'],
-    [b'#1.0 $'],
-    [b'#R\x00$'],
-    [b'#\x00$'],
-    [b'#B$'],
-    [b'#\n', b'\x1a$'],
-    [b'#\x00$'],
-    [b'#\x00$'],
-    [b'#M181130         $'],
-    [b'#181116  $'],
-    [b'#h$'],
-    [b'#\xf0$'],
-    [b'#\x01$'],
-    [b'#\x8a$'],
-    [b'#\x00\x00\x11_"\xa4\x8b\xa3\\;[o\x81\xf2N@T\xe8{\x00\x00\x00\x00\x00\x00\x00\x00\x00gV\xcf\x00$'],
-    [b'#\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff$']
-]
-
-cache01 = [
-    [b'#_\x00\xce\x00U\x00\xf6\x00\x8d\xccrt\x88\xb8v\\\x1dL\x03\xe8\x17p\x05\xdcN \x03\xbbEv\x05\xeaN \x00\xe5Ev\x01k$'],
-    [b'#\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00$'],
-    [b'#\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00?\x80\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00$'],
-    [b'#\x00\x00\x00$'],
-    [b'#\x98$'],
-    [b'#\x1c\x1c~\xe0\x0c\x86#\xf6\x00\x01$'],
-    [b'#\x00\x00\x00\x00$'],
-    [b'#\x02$'],
-    [b'#\x00$'],
-    [b'#\x00@$'],
-    [b'#\x00$'],
-    [b'#\x00$'],
-    [b'#\x00@$'],
-    [b'#\x00\x00$'],
-    [b'#\x00\x00\x00\x00\x00\x00\x00$'],
-    [b'#\x00$'],
-    [b'#\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff$'],
-    [b'#\xff\xff\xff\xff\xff\xff\xff\xff$'],
-    [b'#\x00\x00\xff\xff$'],
-    [b'#\xff$'],
-    [b'#\xff$'],
-    [b'#\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff$'],
-    [b'#\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff$']
-
-]
-
 
 class Core(object):
     def __init__(self):
         self.register_a0_sfp = {
-            "0": "1",
-            "1": "1",
-            "2": "1",
-            "3": "8",
-            "11": "1",
-            "12": "1",
-            "13": "1",
-            "14": "1",
-            "15": "1",
-            "16": "1",
-            "17": "1",
-            "18": "1",
-            "19": "1",
-            "20": "16",
-            "36": "1",
-            "37": "3",
-            "40": "16",
-            "56": "4",
-            "61": "2",
-            "62": "1",
-            "63": "1",
-            "64": "2",
-            "66": "1",
-            "67": "1",
-            "68": "16",
-            "84": "8",
-            "92": "1",
-            "93": "1",
-            "94": "1",
-            "95": "1",
-            "96": "32",
-            "128": "128"
+            "20": "16",  # Name
+            "37": "3",   # OUI
+            "40": "16",  # PN
+            "56": "4",   # Rev
+            "68": "16",  # SN
+            "84": "8",   # Date Code
         }
         self.register_a2_sfp = {
             "0": "40",
@@ -267,26 +179,116 @@ class Core(object):
         self.match_t(optional_name[0:1], self.optional_106_109[0:2], self.threshold_dict)
         # TEC电流匹配提取
         self.match_e(optional_name[1:2], self.optional_106_109[2:4], self.threshold_dict)
-        print(self.optional_106_109, self.threshold_40_55)
-        # for i in self.threshold_dict:
-        #     print(i + " : " + str(self.threshold_dict[i]))
-        # print(self.threshold_dict["Temperature"])
-        return self.threshold_dict
 
-    # def clear_data(self):
-    #     del self.threshold_0_39[:]
-    #     del self.threshold_40_55[:]
-    #     del self.present_96_105[:]
-    #     del self.optional_106_109[:]
-    #     print(self.threshold_dict)
-    #     self.threshold_dict = {}
-    #     print(self.threshold_dict)
+        return self.threshold_dict
+    
+    @staticmethod
+    def classify(key, value, data, line, color):
+        box = []
+        boxes = []
+        item = {}
+        for i, n  in enumerate(key):
+            for j in value[i]:
+                if data[n] > data[j]:
+                    box.append(1)
+                elif data[n] < data[j]:
+                    box.append(0)
+                else:
+                    box.append(2)
+        for k in range(len(box)//4):
+            boxes.append(box[4*k:4*k+4])
+        for m in boxes[0:-2]:
+            for n in range(2):
+                if m[2*n] == 0:
+                    m[2*n] = color[0]
+                else:
+                    m[2*n] = color[1]
+                if m[3**n] == 1:
+                    m[3**n] = color[0]
+                else:
+                    m[3**n] = color[1]
+        for m in boxes[-2:]:
+            for n in range(2):
+                if m[2*n] == 0:
+                    m[2*n] = color[0]
+                elif m[2*n] == 2:
+                    m[2*n] = color[0]
+                else:
+                    m[2*n] = color[1]
+                if m[3**n] == 1:
+                    m[3**n] = color[0]
+                elif m[3**n] == 2:
+                    m[3**n] = color[0]
+                else:
+                    m[3**n] = color[1]
+        for i, n in enumerate(boxes):
+            for p in range(1,5):
+                item[line[i] + "_" + str(p)] = n[p-1]
+        return item
+
+
+    @staticmethod
+    def opposition_info(value: list):
+        """数据读取，显示于读取区域"""
+        info_key = ["Name", "OUI", "PN", "Version", "SN", "Date"]
+        info_value = []
+        for i in value:
+            k = str(i[0]).replace("b'#", '').replace("$'", "").replace("P", '').replace("$", '').replace("#", '')
+            info_value.append(k)
+        info = {
+            info_key[0]: info_value[0], info_key[1]: info_value[1],
+            info_key[2]: info_value[2], info_key[3]: info_value[3],
+            info_key[4]: info_value[4], info_key[5]: info_value[5]
+        }
+        print(info)
+        return info
+
+    @staticmethod
+    def hex_decode(value):
+        """进制转换(10 -> 16)"""
+        value = value.upper()
+        num_box = []
+        num = {
+            "1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8,
+            "9": 9, "A": 10, "B": 11, "C": 12, "D": 13, "E": 14, "F": 15
+        }
+        try:
+            return int(value)
+        except:
+            if len(value) == 2:
+                for i in value:
+                    if i in num:
+                        num_box.append(num[i])
+                sum_data = num_box[0]*16 + num_box[1]
+                return sum_data
+            else:
+                for i in value:
+                    if i in num:
+                        num_box.append(num[i])
+                sum_data = num_box[0]
+                return sum_data
+
+    @staticmethod
+    def data_setup(value, key: list):
+        """解码重组"""
+        for i in value:
+            key.append(i)
+        return key
+
+    @staticmethod
+    def data_encode(key: str):
+        item = []
+        value = key.encode("gbk")
+        for i in value:
+            item.append(i)
+        return item
 
 
 # def main():
+#
 #     core = Core()
-#     core.opposition_data(cache01)
-
-
+#     core.hex_decode(value="9f")
+#
+#
 # if __name__ == '__main__':
 #     main()

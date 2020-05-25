@@ -27,4 +27,6 @@
 0x50 表示写入成功，其他值表示写入失败；
 0x24 尾针，固定不变。
 
+self.lineEdit_PassWord.setInputMask("-  HH  -  HH  -  HH  -  HH  -")
+
 
