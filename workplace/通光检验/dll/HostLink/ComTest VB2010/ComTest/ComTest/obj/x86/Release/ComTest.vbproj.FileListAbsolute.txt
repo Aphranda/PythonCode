@@ -1,0 +1,48 @@
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\ComTest.exe
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\ComTest.pdb
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\ComTest.xml
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\FinsCom.dll
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\FinsCom.pdb
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\FinsCom.xml
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.vbprojResolveAssemblyReference.cache
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Form1.resources
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Resources.resources
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.vbproj.GenerateResource.Cache
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.exe
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.xml
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.pdb
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\ComTest.exe
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\ComTest.pdb
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\ComTest.xml
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\FinsCom.dll
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\FinsCom.pdb
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\FinsCom.xml
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Form1.resources
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Resources.resources
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.vbproj.GenerateResource.Cache
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.exe
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.xml
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.pdb
+E:\FINSCOM NET 160422\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.exe
+E:\FINSCOM NET 160422\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.xml
+E:\FINSCOM NET 160422\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.pdb
+E:\FINSCOM NET 160422\ComTest\ComTest\ComTest\bin\Release\ComTest.exe
+E:\FINSCOM NET 160422\ComTest\ComTest\ComTest\bin\Release\ComTest.pdb
+E:\FINSCOM NET 160422\ComTest\ComTest\ComTest\bin\Release\ComTest.xml
+E:\FINSCOM NET 160422\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Form1.resources
+E:\FINSCOM NET 160422\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Resources.resources
+E:\FINSCOM NET 160422\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.vbproj.GenerateResource.Cache
+J:\FINSCOM NET 160422\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.exe
+J:\FINSCOM NET 160422\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.xml
+J:\FINSCOM NET 160422\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.pdb
+J:\ttemp\OM COM VB10 160709\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.exe
+J:\ttemp\OM COM VB10 160709\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.xml
+J:\ttemp\OM COM VB10 160709\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.pdb
+J:\ttemp\OM COM VB10 160709\ComTest\ComTest\ComTest\bin\Release\ComTest.exe
+J:\ttemp\OM COM VB10 160709\ComTest\ComTest\ComTest\bin\Release\ComTest.pdb
+J:\ttemp\OM COM VB10 160709\ComTest\ComTest\ComTest\bin\Release\ComTest.xml
+J:\ttemp\OM COM VB10 160709\ComTest\ComTest\ComTest\bin\Release\FinsCom.pdb
+J:\ttemp\OM COM VB10 160709\ComTest\ComTest\ComTest\bin\Release\FinsCom.xml
+J:\ttemp\OM COM VB10 160709\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Form1.resources
+J:\ttemp\OM COM VB10 160709\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Resources.resources
+J:\ttemp\OM COM VB10 160709\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.vbproj.GenerateResource.Cache

@@ -1,0 +1,9 @@
+D:\DLL PROJECT\OM FinsCom VB10 180702\ComTest CS2010\obj\x86\Debug\ComTest.Form1.resources
+D:\DLL PROJECT\OM FinsCom VB10 180702\ComTest CS2010\obj\x86\Debug\ComTest.Properties.Resources.resources
+D:\DLL PROJECT\OM FinsCom VB10 180702\ComTest CS2010\obj\x86\Debug\ComTest.csproj.GenerateResource.Cache
+D:\DLL PROJECT\OM FinsCom VB10 180702\ComTest CS2010\bin\Debug\ComTest.exe
+D:\DLL PROJECT\OM FinsCom VB10 180702\ComTest CS2010\bin\Debug\ComTest.pdb
+D:\DLL PROJECT\OM FinsCom VB10 180702\ComTest CS2010\bin\Debug\ComTest.xml
+D:\DLL PROJECT\OM FinsCom VB10 180702\ComTest CS2010\bin\Debug\FinsCom.dll
+D:\DLL PROJECT\OM FinsCom VB10 180702\ComTest CS2010\obj\x86\Debug\ComTest.exe
+D:\DLL PROJECT\OM FinsCom VB10 180702\ComTest CS2010\obj\x86\Debug\ComTest.pdb

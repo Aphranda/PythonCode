@@ -1,0 +1,47 @@
+“节点数量”以及其他“main通光.vi”的统计。
+列出vi.lib中的不包括文件。
+列出以下位置中未包含的文件: 无
+用户VI数量: 40
+vi.lib中VI的数量: 92VI	节点数量
+总计	2539
+平均	63.48
+main通光.vi	792
+保存01.vi	40
+读取EXCEL表数据.vi	33
+读入01.vi	78
+各通道偏差值输入.vi	79
+根据模板生成测试报告subVI_v4.1.vi	140
+检测结果统计.vi	136
+生成execl文件.vi	15
+通光检测.vi	133
+先进AI9508A波长切换（RS232）.vi	19
+先进AI9508A回波损耗测试仪数据读取（RS232）.vi	85
+先进AI9508A数据读取（1310，1550）.vi	15
+选择通道.vi	16
+自动检测.vi	67
+add events.vi	34
+buil path.vi	10
+bundle检测.vi	130
+delect file.vi	11
+error handle.vi	108
+get events.vi	11
+get time.vi	5
+inital path.vi	21
+Elapsed Time	14
+Elapsed Time2	14
+menu control.vi	18
+state.vi	27
+value change.vi	27
+选择通道（mems多模24光开关）.vi	18
+OpenExcel(SubVI).vi	17
+Set 1 Cell Value.vi	13
+Set Array Value.vi	17
+状态数组计数.vi	12
+PLC读写 (4字节）.vi	57
+PLC读写.vi	56
+先进AI9508A数据读取（RS232）.vi	131
+提取字符串.vi	11
+enable menue.vi	11
+数字转16进制显示（郑敏）.vi	63
+Row Col To Range Format.vi	35
+omron串口fcs.vi	20

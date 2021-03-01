@@ -1,0 +1,367 @@
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\ComTest.exe
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\ComTest.pdb
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\ComTest.xml
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\FinsCom.dll
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\FinsCom.pdb
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\FinsCom.xml
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.vbprojResolveAssemblyReference.cache
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Form1.resources
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Resources.resources
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.vbproj.GenerateResource.Cache
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.exe
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.xml
+J:\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.pdb
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\ComTest.exe
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\ComTest.pdb
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\ComTest.xml
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\FinsCom.dll
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\FinsCom.pdb
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\bin\Release\FinsCom.xml
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Form1.resources
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Resources.resources
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.vbproj.GenerateResource.Cache
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.exe
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.xml
+E:\temp\FINSCOM NET 160420\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.pdb
+E:\FINSCOM NET 160422\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.exe
+E:\FINSCOM NET 160422\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.xml
+E:\FINSCOM NET 160422\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.pdb
+E:\FINSCOM NET 160422\ComTest\ComTest\ComTest\bin\Release\ComTest.exe
+E:\FINSCOM NET 160422\ComTest\ComTest\ComTest\bin\Release\ComTest.pdb
+E:\FINSCOM NET 160422\ComTest\ComTest\ComTest\bin\Release\ComTest.xml
+E:\FINSCOM NET 160422\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Form1.resources
+E:\FINSCOM NET 160422\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Resources.resources
+E:\FINSCOM NET 160422\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.vbproj.GenerateResource.Cache
+J:\FINSCOM NET 160422\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.exe
+J:\FINSCOM NET 160422\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.xml
+J:\FINSCOM NET 160422\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.pdb
+D:\TEMP\S7 PPIVB10 160709\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.exe
+D:\TEMP\S7 PPIVB10 160709\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.xml
+D:\TEMP\S7 PPIVB10 160709\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.pdb
+D:\TEMP\S7 PPIVB10 160709\ComTest\ComTest\ComTest\obj\x86\Release\ResolveAssemblyReference.cache
+D:\TEMP\S7 PPIVB10 160709\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Form1.resources
+D:\TEMP\S7 PPIVB10 160709\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Resources.resources
+D:\TEMP\S7 PPIVB10 160709\ComTest\ComTest\ComTest\obj\x86\Release\GenerateResource.read.1.tlog
+D:\TEMP\S7 PPIVB10 160709\ComTest\ComTest\ComTest\obj\x86\Release\GenerateResource.write.1.tlog
+D:\TEMP\S7 PPIVB10 160709\ComTest\ComTest\ComTest\bin\Release\ComTest.exe
+D:\TEMP\S7 PPIVB10 160709\ComTest\ComTest\ComTest\bin\Release\ComTest.pdb
+D:\TEMP\S7 PPIVB10 160709\ComTest\ComTest\ComTest\bin\Release\ComTest.xml
+D:\TEMP\S7 PPIVB10 160709\ComTest\ComTest\ComTest\bin\Release\WinS7_PPI.dll
+D:\TEMP\S7 PPIVB10 160709\ComTest\ComTest\ComTest\bin\Release\WinS7_PPI.pdb
+D:\TEMP\S7 PPIVB10 160709\ComTest\ComTest\ComTest\bin\Release\WinS7_PPI.xml
+E:\S7 PPIVB10 160709\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.exe
+E:\S7 PPIVB10 160709\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.xml
+E:\S7 PPIVB10 160709\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.pdb
+E:\S7 PPIVB10 160709\ComTest\ComTest\ComTest\bin\Release\ComTest.exe
+E:\S7 PPIVB10 160709\ComTest\ComTest\ComTest\bin\Release\ComTest.pdb
+E:\S7 PPIVB10 160709\ComTest\ComTest\ComTest\bin\Release\ComTest.xml
+E:\S7 PPIVB10 160709\ComTest\ComTest\ComTest\bin\Release\WinS7_PPI.pdb
+E:\S7 PPIVB10 160709\ComTest\ComTest\ComTest\bin\Release\WinS7_PPI.xml
+E:\S7 PPIVB10 160709\ComTest\ComTest\ComTest\obj\x86\Release\ResolveAssemblyReference.cache
+E:\S7 PPIVB10 160709\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Form1.resources
+E:\S7 PPIVB10 160709\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Resources.resources
+E:\S7 PPIVB10 160709\ComTest\ComTest\ComTest\obj\x86\Release\GenerateResource.read.1.tlog
+E:\S7 PPIVB10 160709\ComTest\ComTest\ComTest\obj\x86\Release\GenerateResource.write.1.tlog
+E:\S7 PPIVB10 160709\ComTest\ComTest\ComTest\bin\Release\WinS7_PPI.dll
+E:\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.exe
+E:\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.xml
+E:\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.pdb
+E:\S7 PPIVB10 160710\ComTest\ComTest\ComTest\bin\Release\ComTest.exe
+E:\S7 PPIVB10 160710\ComTest\ComTest\ComTest\bin\Release\ComTest.pdb
+E:\S7 PPIVB10 160710\ComTest\ComTest\ComTest\bin\Release\ComTest.xml
+E:\S7 PPIVB10 160710\ComTest\ComTest\ComTest\bin\Release\WinS7_PPI.xml
+E:\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\ResolveAssemblyReference.cache
+E:\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Form1.resources
+E:\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Resources.resources
+E:\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\GenerateResource.read.1.tlog
+E:\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\GenerateResource.write.1.tlog
+E:\S7 PPIVB10 160710\ComTest\ComTest\ComTest\bin\Release\WinS7_PPI.dll
+E:\S7 PPIVB10 160710\ComTest\ComTest\ComTest\bin\Release\WinS7_PPI.pdb
+D:\ttemp\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.exe
+D:\ttemp\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.xml
+D:\ttemp\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.pdb
+D:\ttemp\S7 PPIVB10 160710\ComTest\ComTest\ComTest\bin\Release\ComTest.exe
+D:\ttemp\S7 PPIVB10 160710\ComTest\ComTest\ComTest\bin\Release\ComTest.pdb
+D:\ttemp\S7 PPIVB10 160710\ComTest\ComTest\ComTest\bin\Release\ComTest.xml
+D:\ttemp\S7 PPIVB10 160710\ComTest\ComTest\ComTest\bin\Release\WinS7_PPI.dll
+D:\ttemp\S7 PPIVB10 160710\ComTest\ComTest\ComTest\bin\Release\WinS7_PPI.pdb
+D:\ttemp\S7 PPIVB10 160710\ComTest\ComTest\ComTest\bin\Release\WinS7_PPI.xml
+D:\ttemp\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\ResolveAssemblyReference.cache
+D:\ttemp\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Form1.resources
+D:\ttemp\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Resources.resources
+D:\ttemp\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\GenerateResource.read.1.tlog
+D:\ttemp\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\GenerateResource.write.1.tlog
+D:\TEMP\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.exe
+D:\TEMP\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.xml
+D:\TEMP\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.pdb
+D:\TEMP\S7 PPIVB10 160710\ComTest\ComTest\ComTest\bin\Release\ComTest.exe
+D:\TEMP\S7 PPIVB10 160710\ComTest\ComTest\ComTest\bin\Release\ComTest.pdb
+D:\TEMP\S7 PPIVB10 160710\ComTest\ComTest\ComTest\bin\Release\ComTest.xml
+D:\TEMP\S7 PPIVB10 160710\ComTest\ComTest\ComTest\bin\Release\WinS7_PPI.dll
+D:\TEMP\S7 PPIVB10 160710\ComTest\ComTest\ComTest\bin\Release\WinS7_PPI.pdb
+D:\TEMP\S7 PPIVB10 160710\ComTest\ComTest\ComTest\bin\Release\WinS7_PPI.xml
+D:\TEMP\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\ResolveAssemblyReference.cache
+D:\TEMP\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Form1.resources
+D:\TEMP\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\ComTest.Resources.resources
+D:\TEMP\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\GenerateResource.read.1.tlog
+D:\TEMP\S7 PPIVB10 160710\ComTest\ComTest\ComTest\obj\x86\Release\GenerateResource.write.1.tlog
+D:\TEMP\S7 PPIVB10 160711\ComTest\ComTest\obj\x86\Release\ComTest.exe
+D:\TEMP\S7 PPIVB10 160711\ComTest\ComTest\obj\x86\Release\ComTest.xml
+D:\TEMP\S7 PPIVB10 160711\ComTest\ComTest\obj\x86\Release\ComTest.pdb
+D:\TEMP\S7 PPIVB10 160711\ComTest\ComTest\bin\Release\ComTest.exe
+D:\TEMP\S7 PPIVB10 160711\ComTest\ComTest\bin\Release\ComTest.pdb
+D:\TEMP\S7 PPIVB10 160711\ComTest\ComTest\bin\Release\ComTest.xml
+D:\TEMP\S7 PPIVB10 160711\ComTest\ComTest\obj\x86\Release\ResolveAssemblyReference.cache
+D:\TEMP\S7 PPIVB10 160711\ComTest\ComTest\obj\x86\Release\ComTest.Form1.resources
+D:\TEMP\S7 PPIVB10 160711\ComTest\ComTest\obj\x86\Release\ComTest.Resources.resources
+D:\TEMP\S7 PPIVB10 160711\ComTest\ComTest\obj\x86\Release\GenerateResource.read.1.tlog
+D:\TEMP\S7 PPIVB10 160711\ComTest\ComTest\obj\x86\Release\GenerateResource.write.1.tlog
+D:\TEMP\S7 PPIVB10 160711\ComTest\ComTest\bin\Release\WinS7_PPI.dll
+D:\TEMP\S7 PPIVB10 160711\ComTest\ComTest\bin\Release\WinS7_PPI.pdb
+D:\TEMP\S7 PPIVB10 160711\ComTest\ComTest\bin\Release\WinS7_PPI.xml
+D:\TEMP\S7 PPIVB10 160712\ComTest\ComTest\obj\x86\Release\ComTest.exe
+D:\TEMP\S7 PPIVB10 160712\ComTest\ComTest\obj\x86\Release\ComTest.xml
+D:\TEMP\S7 PPIVB10 160712\ComTest\ComTest\obj\x86\Release\ComTest.pdb
+D:\TEMP\S7 PPIVB10 160712\ComTest\ComTest\bin\Release\ComTest.exe
+D:\TEMP\S7 PPIVB10 160712\ComTest\ComTest\bin\Release\ComTest.pdb
+D:\TEMP\S7 PPIVB10 160712\ComTest\ComTest\bin\Release\ComTest.xml
+D:\TEMP\S7 PPIVB10 160712\ComTest\ComTest\obj\x86\Release\ResolveAssemblyReference.cache
+D:\TEMP\S7 PPIVB10 160712\ComTest\ComTest\obj\x86\Release\ComTest.Form1.resources
+D:\TEMP\S7 PPIVB10 160712\ComTest\ComTest\obj\x86\Release\ComTest.Resources.resources
+D:\TEMP\S7 PPIVB10 160712\ComTest\ComTest\obj\x86\Release\GenerateResource.read.1.tlog
+D:\TEMP\S7 PPIVB10 160712\ComTest\ComTest\obj\x86\Release\GenerateResource.write.1.tlog
+D:\TEMP\S7 PPIVB10 160712\ComTest VB2010\ComTest\obj\x86\Release\ComTest.exe
+D:\TEMP\S7 PPIVB10 160712\ComTest VB2010\ComTest\obj\x86\Release\ComTest.xml
+D:\TEMP\S7 PPIVB10 160712\ComTest VB2010\ComTest\obj\x86\Release\ComTest.pdb
+D:\TEMP\S7 PPIVB10 160712\ComTest VB2010\ComTest\bin\Release\ComTest.exe
+D:\TEMP\S7 PPIVB10 160712\ComTest VB2010\ComTest\bin\Release\ComTest.pdb
+D:\TEMP\S7 PPIVB10 160712\ComTest VB2010\ComTest\bin\Release\ComTest.xml
+D:\TEMP\S7 PPIVB10 160712\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.dll
+D:\TEMP\S7 PPIVB10 160712\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.pdb
+D:\TEMP\S7 PPIVB10 160712\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.xml
+D:\TEMP\S7 PPIVB10 160712\ComTest VB2010\ComTest\obj\x86\Release\ResolveAssemblyReference.cache
+D:\TEMP\S7 PPIVB10 160712\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Form1.resources
+D:\TEMP\S7 PPIVB10 160712\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Resources.resources
+D:\TEMP\S7 PPIVB10 160712\ComTest VB2010\ComTest\obj\x86\Release\GenerateResource.read.1.tlog
+D:\TEMP\S7 PPIVB10 160712\ComTest VB2010\ComTest\obj\x86\Release\GenerateResource.write.1.tlog
+J:\TTEMP\S7 PPIVB10 160721\ComTest VB2010\ComTest\obj\x86\Release\ComTest.exe
+J:\TTEMP\S7 PPIVB10 160721\ComTest VB2010\ComTest\obj\x86\Release\ComTest.xml
+J:\TTEMP\S7 PPIVB10 160721\ComTest VB2010\ComTest\obj\x86\Release\ComTest.pdb
+J:\TTEMP\S7 PPIVB10 160721\ComTest VB2010\ComTest\bin\Release\ComTest.exe
+J:\TTEMP\S7 PPIVB10 160721\ComTest VB2010\ComTest\bin\Release\ComTest.pdb
+J:\TTEMP\S7 PPIVB10 160721\ComTest VB2010\ComTest\bin\Release\ComTest.xml
+J:\TTEMP\S7 PPIVB10 160721\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.dll
+J:\TTEMP\S7 PPIVB10 160721\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.pdb
+J:\TTEMP\S7 PPIVB10 160721\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.xml
+J:\TTEMP\S7 PPIVB10 160721\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Form1.resources
+J:\TTEMP\S7 PPIVB10 160721\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Resources.resources
+J:\TTEMP\S7 PPIVB10 160721\ComTest VB2010\ComTest\obj\x86\Release\ComTest.vbproj.GenerateResource.Cache
+E:\S7 PPIVB10 160808\ComTest VB2010\ComTest\obj\x86\Release\ComTest.exe
+E:\S7 PPIVB10 160808\ComTest VB2010\ComTest\obj\x86\Release\ComTest.xml
+E:\S7 PPIVB10 160808\ComTest VB2010\ComTest\obj\x86\Release\ComTest.pdb
+E:\S7 PPIVB10 160808\ComTest VB2010\ComTest\bin\Release\ComTest.exe
+E:\S7 PPIVB10 160808\ComTest VB2010\ComTest\bin\Release\ComTest.pdb
+E:\S7 PPIVB10 160808\ComTest VB2010\ComTest\bin\Release\ComTest.xml
+E:\S7 PPIVB10 160808\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.dll
+E:\S7 PPIVB10 160808\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.pdb
+E:\S7 PPIVB10 160808\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.xml
+E:\S7 PPIVB10 160808\ComTest VB2010\ComTest\obj\x86\Release\ComTest.vbprojResolveAssemblyReference.cache
+E:\S7 PPIVB10 160808\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Form1.resources
+E:\S7 PPIVB10 160808\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Resources.resources
+E:\S7 PPIVB10 160808\ComTest VB2010\ComTest\obj\x86\Release\ComTest.vbproj.GenerateResource.Cache
+C:\VM-WIN7-FILES\S7 PPIVB10 160808\ComTest VB2010\ComTest\obj\x86\Release\ComTest.exe
+C:\VM-WIN7-FILES\S7 PPIVB10 160808\ComTest VB2010\ComTest\obj\x86\Release\ComTest.xml
+C:\VM-WIN7-FILES\S7 PPIVB10 160808\ComTest VB2010\ComTest\obj\x86\Release\ComTest.pdb
+C:\VM-WIN7-FILES\S7 PPIVB10 160808\ComTest VB2010\ComTest\bin\Release\ComTest.exe
+C:\VM-WIN7-FILES\S7 PPIVB10 160808\ComTest VB2010\ComTest\bin\Release\ComTest.pdb
+C:\VM-WIN7-FILES\S7 PPIVB10 160808\ComTest VB2010\ComTest\bin\Release\ComTest.xml
+C:\VM-WIN7-FILES\S7 PPIVB10 160808\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.dll
+C:\VM-WIN7-FILES\S7 PPIVB10 160808\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.pdb
+C:\VM-WIN7-FILES\S7 PPIVB10 160808\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.xml
+C:\VM-WIN7-FILES\S7 PPIVB10 160808\ComTest VB2010\ComTest\obj\x86\Release\ResolveAssemblyReference.cache
+C:\VM-WIN7-FILES\S7 PPIVB10 160808\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Form1.resources
+C:\VM-WIN7-FILES\S7 PPIVB10 160808\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Resources.resources
+C:\VM-WIN7-FILES\S7 PPIVB10 160808\ComTest VB2010\ComTest\obj\x86\Release\GenerateResource.read.1.tlog
+C:\VM-WIN7-FILES\S7 PPIVB10 160808\ComTest VB2010\ComTest\obj\x86\Release\GenerateResource.write.1.tlog
+C:\VM-WIN7-FILES\S7 PPIVB10 160816\ComTest VB2010\ComTest\bin\Release\ComTest.exe
+C:\VM-WIN7-FILES\S7 PPIVB10 160816\ComTest VB2010\ComTest\bin\Release\ComTest.pdb
+C:\VM-WIN7-FILES\S7 PPIVB10 160816\ComTest VB2010\ComTest\bin\Release\ComTest.xml
+C:\VM-WIN7-FILES\S7 PPIVB10 160816\ComTest VB2010\ComTest\obj\x86\Release\ResolveAssemblyReference.cache
+C:\VM-WIN7-FILES\S7 PPIVB10 160816\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Form1.resources
+C:\VM-WIN7-FILES\S7 PPIVB10 160816\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Resources.resources
+C:\VM-WIN7-FILES\S7 PPIVB10 160816\ComTest VB2010\ComTest\obj\x86\Release\GenerateResource.read.1.tlog
+C:\VM-WIN7-FILES\S7 PPIVB10 160816\ComTest VB2010\ComTest\obj\x86\Release\GenerateResource.write.1.tlog
+C:\VM-WIN7-FILES\S7 PPIVB10 160816\ComTest VB2010\ComTest\obj\x86\Release\ComTest.exe
+C:\VM-WIN7-FILES\S7 PPIVB10 160816\ComTest VB2010\ComTest\obj\x86\Release\ComTest.xml
+C:\VM-WIN7-FILES\S7 PPIVB10 160816\ComTest VB2010\ComTest\obj\x86\Release\ComTest.pdb
+E:\S7 PPIVB10 160816\ComTest VB2010\ComTest\obj\x86\Release\ComTest.exe
+E:\S7 PPIVB10 160816\ComTest VB2010\ComTest\obj\x86\Release\ComTest.xml
+E:\S7 PPIVB10 160816\ComTest VB2010\ComTest\obj\x86\Release\ComTest.pdb
+E:\S7 PPIVB10 160816\ComTest VB2010\ComTest\bin\Release\ComTest.exe
+E:\S7 PPIVB10 160816\ComTest VB2010\ComTest\bin\Release\ComTest.pdb
+E:\S7 PPIVB10 160816\ComTest VB2010\ComTest\bin\Release\ComTest.xml
+E:\S7 PPIVB10 160816\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Form1.resources
+E:\S7 PPIVB10 160816\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Resources.resources
+E:\S7 PPIVB10 160816\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.dll
+E:\S7 PPIVB10 160816\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.pdb
+E:\S7 PPIVB10 160816\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.xml
+E:\S7 PPIVB10 160816\ComTest VB2010\ComTest\obj\x86\Release\ResolveAssemblyReference.cache
+E:\S7 PPIVB10 160816\ComTest VB2010\ComTest\obj\x86\Release\GenerateResource.read.1.tlog
+E:\S7 PPIVB10 160816\ComTest VB2010\ComTest\obj\x86\Release\GenerateResource.write.1.tlog
+E:\S7 PPIVB10 160820\ComTest VB2010\ComTest\obj\x86\Release\ComTest.exe
+E:\S7 PPIVB10 160820\ComTest VB2010\ComTest\obj\x86\Release\ComTest.xml
+E:\S7 PPIVB10 160820\ComTest VB2010\ComTest\obj\x86\Release\ComTest.pdb
+E:\S7 PPIVB10 160820\ComTest VB2010\ComTest\bin\Release\ComTest.exe
+E:\S7 PPIVB10 160820\ComTest VB2010\ComTest\bin\Release\ComTest.pdb
+E:\S7 PPIVB10 160820\ComTest VB2010\ComTest\bin\Release\ComTest.xml
+E:\S7 PPIVB10 160820\ComTest VB2010\ComTest\obj\x86\Release\ResolveAssemblyReference.cache
+E:\S7 PPIVB10 160820\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Form1.resources
+E:\S7 PPIVB10 160820\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Resources.resources
+E:\S7 PPIVB10 160820\ComTest VB2010\ComTest\obj\x86\Release\GenerateResource.read.1.tlog
+E:\S7 PPIVB10 160820\ComTest VB2010\ComTest\obj\x86\Release\GenerateResource.write.1.tlog
+E:\S7 PPIVB10 160820\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.dll
+E:\S7 PPIVB10 160820\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.pdb
+E:\S7 PPIVB10 160820\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.xml
+E:\S7 PPIVB10 160819\ComTest VB2010\ComTest\obj\x86\Release\ComTest.exe
+E:\S7 PPIVB10 160819\ComTest VB2010\ComTest\obj\x86\Release\ComTest.xml
+E:\S7 PPIVB10 160819\ComTest VB2010\ComTest\obj\x86\Release\ComTest.pdb
+E:\S7 PPIVB10 160819\ComTest VB2010\ComTest\bin\Release\ComTest.exe
+E:\S7 PPIVB10 160819\ComTest VB2010\ComTest\bin\Release\ComTest.pdb
+E:\S7 PPIVB10 160819\ComTest VB2010\ComTest\bin\Release\ComTest.xml
+E:\S7 PPIVB10 160819\ComTest VB2010\ComTest\obj\x86\Release\ResolveAssemblyReference.cache
+E:\S7 PPIVB10 160819\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Form1.resources
+E:\S7 PPIVB10 160819\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Resources.resources
+E:\S7 PPIVB10 160819\ComTest VB2010\ComTest\obj\x86\Release\GenerateResource.read.1.tlog
+E:\S7 PPIVB10 160819\ComTest VB2010\ComTest\obj\x86\Release\GenerateResource.write.1.tlog
+L:\TTEMP\S7 PPIVB10 160820\ComTest VB2010\ComTest\obj\x86\Release\ComTest.exe
+L:\TTEMP\S7 PPIVB10 160820\ComTest VB2010\ComTest\obj\x86\Release\ComTest.xml
+L:\TTEMP\S7 PPIVB10 160820\ComTest VB2010\ComTest\obj\x86\Release\ComTest.pdb
+L:\TTEMP\S7 PPIVB10 160820\ComTest VB2010\ComTest\bin\Release\ComTest.exe
+L:\TTEMP\S7 PPIVB10 160820\ComTest VB2010\ComTest\bin\Release\ComTest.pdb
+L:\TTEMP\S7 PPIVB10 160820\ComTest VB2010\ComTest\bin\Release\ComTest.xml
+L:\TTEMP\S7 PPIVB10 160820\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Form1.resources
+L:\TTEMP\S7 PPIVB10 160820\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Resources.resources
+L:\TTEMP\S7 PPIVB10 160820\ComTest VB2010\ComTest\obj\x86\Release\ComTest.vbproj.GenerateResource.Cache
+D:\S7 PPIVB10 180127\ComTest VB2010\ComTest\obj\x86\Release\ComTest.exe
+D:\S7 PPIVB10 180127\ComTest VB2010\ComTest\obj\x86\Release\ComTest.xml
+D:\S7 PPIVB10 180127\ComTest VB2010\ComTest\obj\x86\Release\ComTest.pdb
+D:\S7 PPIVB10 180127\ComTest VB2010\ComTest\bin\Release\ComTest.exe
+D:\S7 PPIVB10 180127\ComTest VB2010\ComTest\bin\Release\ComTest.pdb
+D:\S7 PPIVB10 180127\ComTest VB2010\ComTest\bin\Release\ComTest.xml
+D:\S7 PPIVB10 180127\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Form1.resources
+D:\S7 PPIVB10 180127\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Resources.resources
+D:\S7 PPIVB10 180127\ComTest VB2010\ComTest\obj\x86\Release\ComTest.vbproj.GenerateResource.Cache
+D:\DLL PROJECT\S7 PPIVB10 180127\ComTest VB2010\ComTest\obj\x86\Release\ComTest.xml
+D:\DLL PROJECT\S7 PPIVB10 180127\ComTest VB2010\ComTest\obj\x86\Release\ComTest.pdb
+D:\DLL PROJECT\S7 PPIVB10 180127\ComTest VB2010\ComTest\bin\Release\ComTest.exe
+D:\DLL PROJECT\S7 PPIVB10 180127\ComTest VB2010\ComTest\bin\Release\ComTest.pdb
+D:\DLL PROJECT\S7 PPIVB10 180127\ComTest VB2010\ComTest\bin\Release\ComTest.xml
+D:\DLL PROJECT\S7 PPIVB10 180127\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Form1.resources
+D:\DLL PROJECT\S7 PPIVB10 180127\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Resources.resources
+D:\DLL PROJECT\S7 PPIVB10 180127\ComTest VB2010\ComTest\obj\x86\Release\ComTest.vbproj.GenerateResource.Cache
+D:\DLL PROJECT\S7 PPIVB10 180127\ComTest VB2010\ComTest\obj\x86\Release\ComTest.exe
+D:\DLL PROJECT\S7 PPIVB10 180127\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.dll
+D:\DLL PROJECT\S7 PPIVB10 180127\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.pdb
+D:\DLL PROJECT\S7 PPIVB10 180127\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.xml
+D:\DLL PROJECT\S7 PPIVB10 180127\ComTest VB2010\ComTest\obj\x86\Release\ComTest.vbprojResolveAssemblyReference.cache
+D:\DLL PROJECT\S7 PPIVB10 180329\ComTest VB2010\ComTest\obj\x86\Release\ComTest.exe
+D:\DLL PROJECT\S7 PPIVB10 180329\ComTest VB2010\ComTest\obj\x86\Release\ComTest.xml
+D:\DLL PROJECT\S7 PPIVB10 180329\ComTest VB2010\ComTest\obj\x86\Release\ComTest.pdb
+D:\DLL PROJECT\S7 PPIVB10 180329\ComTest VB2010\ComTest\bin\Release\ComTest.exe
+D:\DLL PROJECT\S7 PPIVB10 180329\ComTest VB2010\ComTest\bin\Release\ComTest.pdb
+D:\DLL PROJECT\S7 PPIVB10 180329\ComTest VB2010\ComTest\bin\Release\ComTest.xml
+D:\DLL PROJECT\S7 PPIVB10 180329\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.dll
+D:\DLL PROJECT\S7 PPIVB10 180329\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.pdb
+D:\DLL PROJECT\S7 PPIVB10 180329\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.xml
+D:\DLL PROJECT\S7 PPIVB10 180329\ComTest VB2010\ComTest\obj\x86\Release\ComTest.vbprojResolveAssemblyReference.cache
+D:\DLL PROJECT\S7 PPIVB10 180329\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Form1.resources
+D:\DLL PROJECT\S7 PPIVB10 180329\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Resources.resources
+D:\DLL PROJECT\S7 PPIVB10 180329\ComTest VB2010\ComTest\obj\x86\Release\ComTest.vbproj.GenerateResource.Cache
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180402\ComTest VB2010\ComTest\obj\x86\Release\ComTest.exe
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180402\ComTest VB2010\ComTest\obj\x86\Release\ComTest.xml
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180402\ComTest VB2010\ComTest\obj\x86\Release\ComTest.pdb
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180402\ComTest VB2010\ComTest\bin\Release\ComTest.exe
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180402\ComTest VB2010\ComTest\bin\Release\ComTest.pdb
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180402\ComTest VB2010\ComTest\bin\Release\ComTest.xml
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180402\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.dll
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180402\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.pdb
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180402\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.xml
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180402\ComTest VB2010\ComTest\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180402\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Form1.resources
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180402\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Resources.resources
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180402\ComTest VB2010\ComTest\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180402\ComTest VB2010\ComTest\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180423\ComTest VB2010\ComTest\obj\x86\Release\ComTest.exe
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180423\ComTest VB2010\ComTest\obj\x86\Release\ComTest.xml
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180423\ComTest VB2010\ComTest\obj\x86\Release\ComTest.pdb
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180423\ComTest VB2010\ComTest\bin\Release\ComTest.exe
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180423\ComTest VB2010\ComTest\bin\Release\ComTest.pdb
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180423\ComTest VB2010\ComTest\bin\Release\ComTest.xml
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180423\ComTest VB2010\ComTest\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180423\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Form1.resources
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180423\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Resources.resources
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180423\ComTest VB2010\ComTest\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Documents and Settings\All Users\Documents\S7\S7 PPIVB10 180423\ComTest VB2010\ComTest\obj\x86\Release\GenerateResource.write.1.tlog
+D:\DLL PROJECT\S7 PPIVB10 180423\ComTest VB2010\ComTest\obj\x86\Release\ComTest.exe
+D:\DLL PROJECT\S7 PPIVB10 180423\ComTest VB2010\ComTest\obj\x86\Release\ComTest.xml
+D:\DLL PROJECT\S7 PPIVB10 180423\ComTest VB2010\ComTest\obj\x86\Release\ComTest.pdb
+D:\DLL PROJECT\S7 PPIVB10 180423\ComTest VB2010\ComTest\obj\x86\Release\ComTest.vbprojResolveAssemblyReference.cache
+D:\DLL PROJECT\S7 PPIVB10 180423\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Form1.resources
+D:\DLL PROJECT\S7 PPIVB10 180423\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Resources.resources
+D:\DLL PROJECT\S7 PPIVB10 180423\ComTest VB2010\ComTest\obj\x86\Release\ComTest.vbproj.GenerateResource.Cache
+D:\DLL PROJECT\S7 PPIVB10 180423\ComTest VB2010\ComTest\bin\Release\ComTest.exe
+D:\DLL PROJECT\S7 PPIVB10 180423\ComTest VB2010\ComTest\bin\Release\ComTest.pdb
+D:\DLL PROJECT\S7 PPIVB10 180423\ComTest VB2010\ComTest\bin\Release\ComTest.xml
+D:\DLL PROJECT\S7 PPIVB10 180429\ComTest VB2010\ComTest\obj\x86\Release\ComTest.exe
+D:\DLL PROJECT\S7 PPIVB10 180429\ComTest VB2010\ComTest\obj\x86\Release\ComTest.xml
+D:\DLL PROJECT\S7 PPIVB10 180429\ComTest VB2010\ComTest\obj\x86\Release\ComTest.pdb
+D:\DLL PROJECT\S7 PPIVB10 180429\ComTest VB2010\ComTest\bin\Release\ComTest.exe
+D:\DLL PROJECT\S7 PPIVB10 180429\ComTest VB2010\ComTest\bin\Release\ComTest.pdb
+D:\DLL PROJECT\S7 PPIVB10 180429\ComTest VB2010\ComTest\bin\Release\ComTest.xml
+D:\DLL PROJECT\S7 PPIVB10 180429\ComTest VB2010\ComTest\obj\x86\Release\ComTest.vbprojResolveAssemblyReference.cache
+D:\DLL PROJECT\S7 PPIVB10 180429\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Form1.resources
+D:\DLL PROJECT\S7 PPIVB10 180429\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Resources.resources
+D:\DLL PROJECT\S7 PPIVB10 180429\ComTest VB2010\ComTest\obj\x86\Release\ComTest.vbproj.GenerateResource.Cache
+D:\DLL PROJECT\S7 PPIVB10 180429\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.dll
+D:\DLL PROJECT\S7 PPIVB10 180429\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.pdb
+D:\DLL PROJECT\S7 PPIVB10 180429\ComTest VB2010\ComTest\bin\Release\WinS7_PPI.xml
+D:\DLL PROJECT\S7 PPIVB10 180510\ComTest VB2010\ComTest\obj\x86\Release\ComTest.exe
+D:\DLL PROJECT\S7 PPIVB10 180510\ComTest VB2010\ComTest\obj\x86\Release\ComTest.xml
+D:\DLL PROJECT\S7 PPIVB10 180510\ComTest VB2010\ComTest\obj\x86\Release\ComTest.pdb
+D:\DLL PROJECT\S7 PPIVB10 180510\ComTest VB2010\ComTest\bin\Release\ComTest.exe
+D:\DLL PROJECT\S7 PPIVB10 180510\ComTest VB2010\ComTest\bin\Release\ComTest.pdb
+D:\DLL PROJECT\S7 PPIVB10 180510\ComTest VB2010\ComTest\bin\Release\ComTest.xml
+D:\DLL PROJECT\S7 PPIVB10 180510\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Form1.resources
+D:\DLL PROJECT\S7 PPIVB10 180510\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Resources.resources
+D:\DLL PROJECT\S7 PPIVB10 180510\ComTest VB2010\ComTest\obj\x86\Release\ComTest.vbproj.GenerateResource.Cache
+G:\TTEMP\Melsec FXCOM VB10 180410\ComTest VB2010\ComTest\obj\x86\Release\ComTest.exe
+G:\TTEMP\Melsec FXCOM VB10 180410\ComTest VB2010\ComTest\obj\x86\Release\ComTest.xml
+G:\TTEMP\Melsec FXCOM VB10 180410\ComTest VB2010\ComTest\obj\x86\Release\ComTest.pdb
+G:\TTEMP\Melsec FXCOM VB10 180410\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Form1.resources
+G:\TTEMP\Melsec FXCOM VB10 180410\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Resources.resources
+G:\TTEMP\Melsec FXCOM VB10 180410\ComTest VB2010\ComTest\obj\x86\Release\ComTest.vbproj.GenerateResource.Cache
+G:\TTEMP\Melsec FXCOM VB10 180410\ComTest VB2010\ComTest\bin\Release\ComTest.exe
+G:\TTEMP\Melsec FXCOM VB10 180410\ComTest VB2010\ComTest\bin\Release\ComTest.pdb
+G:\TTEMP\Melsec FXCOM VB10 180410\ComTest VB2010\ComTest\bin\Release\ComTest.xml
+D:\DLL PROJECT\OM FinsCom VB10 180512\ComTest VB2010\ComTest\obj\x86\Release\ComTest.xml
+D:\DLL PROJECT\OM FinsCom VB10 180512\ComTest VB2010\ComTest\obj\x86\Release\ComTest.pdb
+D:\DLL PROJECT\OM FinsCom VB10 180512\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Form1.resources
+D:\DLL PROJECT\OM FinsCom VB10 180512\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Resources.resources
+D:\DLL PROJECT\OM FinsCom VB10 180512\ComTest VB2010\ComTest\obj\x86\Release\ComTest.vbproj.GenerateResource.Cache
+D:\DLL PROJECT\OM FinsCom VB10 180512\ComTest VB2010\ComTest\bin\Release\ComTest.exe
+D:\DLL PROJECT\OM FinsCom VB10 180512\ComTest VB2010\ComTest\bin\Release\ComTest.pdb
+D:\DLL PROJECT\OM FinsCom VB10 180512\ComTest VB2010\ComTest\bin\Release\ComTest.xml
+D:\DLL PROJECT\OM FinsCom VB10 180512\ComTest VB2010\ComTest\obj\x86\Release\ComTest.exe
+D:\DLL PROJECT\OM FinsCom VB10 180512\ComTest VB2010\ComTest\bin\Release\FinsCom.dll
+D:\DLL PROJECT\OM FinsCom VB10 180512\ComTest VB2010\ComTest\bin\Release\FinsCom.pdb
+D:\DLL PROJECT\OM FinsCom VB10 180512\ComTest VB2010\ComTest\bin\Release\FinsCom.xml
+D:\DLL PROJECT\OM FinsCom VB10 180512\ComTest VB2010\ComTest\obj\x86\Release\ComTest.vbprojResolveAssemblyReference.cache
+D:\DLL PROJECT\OM FinsCom VB10 180702\ComTest VB2010\ComTest\obj\x86\Release\ComTest.exe
+D:\DLL PROJECT\OM FinsCom VB10 180702\ComTest VB2010\ComTest\obj\x86\Release\ComTest.xml
+D:\DLL PROJECT\OM FinsCom VB10 180702\ComTest VB2010\ComTest\obj\x86\Release\ComTest.pdb
+D:\DLL PROJECT\OM FinsCom VB10 180702\ComTest VB2010\ComTest\bin\Release\ComTest.exe
+D:\DLL PROJECT\OM FinsCom VB10 180702\ComTest VB2010\ComTest\bin\Release\ComTest.pdb
+D:\DLL PROJECT\OM FinsCom VB10 180702\ComTest VB2010\ComTest\bin\Release\ComTest.xml
+D:\DLL PROJECT\OM FinsCom VB10 180702\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Form1.resources
+D:\DLL PROJECT\OM FinsCom VB10 180702\ComTest VB2010\ComTest\obj\x86\Release\ComTest.Resources.resources
+D:\DLL PROJECT\OM FinsCom VB10 180702\ComTest VB2010\ComTest\obj\x86\Release\ComTest.vbproj.GenerateResource.Cache

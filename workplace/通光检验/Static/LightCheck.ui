@@ -1,0 +1,2048 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1575</width>
+    <height>992</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1551</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="lineWidth">
+     <number>2</number>
+    </property>
+    <widget class="QTextEdit" name="textEdit_systemNews">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>1341</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QFrame" name="frame_15">
+     <property name="geometry">
+      <rect>
+       <x>1360</x>
+       <y>10</y>
+       <width>181</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="lineWidth">
+      <number>2</number>
+     </property>
+     <widget class="QComboBox" name="comboBox_portcheck">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>10</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>COM串口</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_portcom">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>连接</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>1551</width>
+      <height>761</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>检测界面</string>
+     </attribute>
+     <widget class="QFrame" name="frame_8">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>10</y>
+        <width>681</width>
+        <height>321</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <widget class="QCheckBox" name="checkBox_same">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>20</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>相同模板，连续保存</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_single">
+       <property name="geometry">
+        <rect>
+         <x>380</x>
+         <y>20</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>独立模板，单独保存</string>
+       </property>
+      </widget>
+      <widget class="Line" name="line">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>20</y>
+         <width>20</width>
+         <height>291</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_same_filepath">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>100</y>
+         <width>271</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>保存路径</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_same_filename">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>200</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>SCRW</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_12">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>160</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>保存文件名</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_single_filename">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>200</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>SCRW</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_single_filepath">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>100</y>
+         <width>271</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>160</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>保存文件名</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_14">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>60</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>保存路径</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_15">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>260</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>储存模板</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_9">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>250</y>
+         <width>141</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="lineWidth">
+        <number>2</number>
+       </property>
+       <widget class="QPushButton" name="pushButton_lightCheck">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>121</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>通光检测</string>
+        </property>
+        <property name="shortcut">
+         <string>Return</string>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QComboBox" name="comboBox_dataTemplate">
+       <property name="geometry">
+        <rect>
+         <x>450</x>
+         <y>261</y>
+         <width>191</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>标准模板</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QFrame" name="frame_10">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>250</y>
+         <width>141</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="lineWidth">
+        <number>2</number>
+       </property>
+       <widget class="QLineEdit" name="lineEdit_passCheck">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>121</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial Black</family>
+          <pointsize>14</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="tabletTracking">
+         <bool>false</bool>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 0, 0);
+</string>
+        </property>
+        <property name="text">
+         <string>fail</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="pushButton_same_path">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>100</y>
+         <width>31</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>/.</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_single_path">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>100</y>
+         <width>31</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>/.</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_6">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>90</y>
+        <width>381</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>120</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>产品芯数：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_productionItem">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>70</y>
+         <width>241</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>产品编号：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_productionNumber">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>20</y>
+         <width>241</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>70</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>产品组数：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_productionCore">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>120</y>
+         <width>241</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_7">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>170</y>
+         <width>341</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="lineWidth">
+        <number>2</number>
+       </property>
+       <widget class="QPushButton" name="pushButton_delete">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>10</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>删除</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_modify">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>修改</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_ok">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>10</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>确认</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>451</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>产品S/N：</string>
+       </property>
+       <property name="buddy">
+        <cstring>lineEdit_production_SN</cstring>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>80</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>产品P/N：</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>130</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>通光配置：</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_lightConfiguration">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>131</y>
+         <width>301</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_production_SN">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>20</y>
+         <width>301</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_production_PN">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>80</y>
+         <width>301</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>189</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>极性配置：</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_polarityConfiguration">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>190</y>
+         <width>301</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>340</y>
+        <width>281</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <widget class="QCheckBox" name="checkBox_moreLight">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>20</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>返修通光</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox_onceLight">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>一次通光</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>490</y>
+        <width>211</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <widget class="QTextEdit" name="textEdit_preimport_branch">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>191</width>
+         <height>161</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_26">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>分支S/N : </string>
+       </property>
+       <property name="buddy">
+        <cstring>textEdit_preimport_branch</cstring>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_up">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>10</y>
+         <width>31</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>U</string>
+       </property>
+       <property name="shortcut">
+        <string>PgUp</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_down">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>10</y>
+         <width>31</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>D</string>
+       </property>
+       <property name="shortcut">
+        <string>PgDown</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_5">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>10</y>
+        <width>381</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>作业员：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_operator">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>20</y>
+         <width>241</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QTableWidget" name="tableWidget_Excel">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>341</y>
+        <width>1071</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <row>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>6</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>7</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>8</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>9</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>10</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>S/N</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>P/N</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>分支S/N</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>极性</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>通光结果</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>通光次数</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>作业员</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>时间</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>产品编号</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>产品组数</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>产品芯数</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QFrame" name="frame_16">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>420</y>
+        <width>231</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <widget class="QTextEdit" name="textEdit_polarityInput">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>111</width>
+         <height>161</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_24">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>极性名称</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_17">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>110</y>
+         <width>91</width>
+         <height>161</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="lineWidth">
+        <number>2</number>
+       </property>
+       <widget class="QPushButton" name="pushButton_polarity_delete">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>110</y>
+          <width>71</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>删除</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_polarity_modify">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>71</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>修改</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_polarity_ok">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>71</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>确认</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_polarityName">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_25">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>极性配置</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_18">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>420</y>
+        <width>211</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <widget class="QPushButton" name="pushButton_polarity_download">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>91</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>极性载入</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="spinBox_polarity">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>11</y>
+         <width>81</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="maximum">
+        <number>24</number>
+       </property>
+       <property name="singleStep">
+        <number>2</number>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_19">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>451</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <widget class="QLabel" name="label_31">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>20</y>
+         <width>71</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>机台号:</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_machine">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>20</y>
+         <width>121</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>确认</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_machine">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>20</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_13">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>340</y>
+        <width>161</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <widget class="QLineEdit" name="lineEdit_count">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>51</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLCDNumber" name="lcdNumber">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>10</y>
+         <width>81</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(142, 255, 193);
+color: rgb(120, 145, 255);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="lineWidth">
+        <number>2</number>
+       </property>
+       <property name="digitCount">
+        <number>3</number>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>结果统计</string>
+     </attribute>
+     <widget class="QFrame" name="frame_11">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>1161</width>
+        <height>701</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <widget class="QTextEdit" name="textEdit_data_show">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>1131</width>
+         <height>681</height>
+        </rect>
+       </property>
+       <property name="lineWrapMode">
+        <enum>QTextEdit::NoWrap</enum>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_14">
+      <property name="geometry">
+       <rect>
+        <x>1180</x>
+        <y>10</y>
+        <width>351</width>
+        <height>701</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <widget class="QLabel" name="label_19">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>130</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>产品SN：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_searchSN">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>130</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_20">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>121</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>数据查询</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_21">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>180</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>产品PN：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_searchPN">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>180</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_22">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>230</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>作业员：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_search_operator">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>230</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_27">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>280</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>通光结果：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_search_result">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>280</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_28">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>380</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>通光时间：</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_29">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>50</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>文件名：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_table_name">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>50</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_12">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>450</y>
+         <width>311</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="lineWidth">
+        <number>2</number>
+       </property>
+       <widget class="QPushButton" name="pushButton_data_delete">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>10</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>删除</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_data_download">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>导出</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_data_ok">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>10</y>
+          <width>91</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>微软雅黑</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>确认</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_30">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>330</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>是否返修：</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_checkAgain">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>330</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <item>
+        <property name="text">
+         <string>否</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>是</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_data_time">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>380</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1575</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <action name="actiondakai">
+   <property name="text">
+    <string>打开配置文件</string>
+   </property>
+  </action>
+  <action name="actionCOM">
+   <property name="text">
+    <string>COM</string>
+   </property>
+  </action>
+  <action name="actionconnect">
+   <property name="text">
+    <string>connect</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

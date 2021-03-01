@@ -1,0 +1,2 @@
+LightCheck.py  267  No section: ''  [2021-01-10 20:07:47]
+LightCheck.py  318  No section: ''  [2021-01-10 20:07:48]

@@ -1,0 +1,63 @@
+
+	public enum DataType
+	{
+		INT16 = 1,
+		UINT16 = 2,
+		DINT32 = 3,
+		HEX32 = 4,
+		REAL32 = 5,
+		BIN16 = 6,
+		BCD16 = 7,
+		BCD32 = 8
+	}
+	
+	public enum PlcMemory
+	{
+		CIO = 1,
+		WR = 2,
+		HR = 3,
+		DR = 4,
+		ER = 5
+	}
+	
+	public enum ParityType
+	{
+		None = 0,
+		Odd = 1,
+		Even = 2,
+		Mark = 3,
+		Space = 4
+	}
+	
+	public short ComLink(ushort ComPort, uint ComRate, ushort DataBit, ushort StopBit, PlcCom.ParityType Parity, ushort OverTime, string SN)
+
+	public short DeLink()
+	
+	
+	public short CmdRead(ushort Station, PlcMemory Memory, DataType ValType, ushort Address, ushort Count, ref object[] Redata)
+
+	public short CmdRead(ushort Station, PlcMemory Memory, DataType ValType, ushort Address, ushort Count, ref string[] Redata)
+
+	
+	public short CmdWrite(ushort Station, PlcMemory Memory, DataType ValType, ushort Address, ushort Count, ref object[] Data)
+	
+	public short CmdWrite(ushort Station, PlcMemory Memory, DataType ValType, ushort Address, ushort Count, ref string[] Data)
+
+	
+	public string CmdReadString(ushort Station, PlcMemory Memory, ushort Address, ushort PlcDataSize)
+	
+	public short CmdWriteString(ushort Station, PlcMemory Memory, ushort Address, ushort PlcDataSize, string Data)
+	
+	
+	public short Bit_Test(ushort Station, PlcMemory Memory, ushort Address, ushort Bit,ref bool State)
+
+	public short Bit_Set(ushort Station, PlcMemory Memory, ushort Address, ushort Bit)
+	
+	public short Bit_Reset(ushort Station, PlcMemory Memory, ushort Address, ushort Bit)
+
+	
+	public short DataConvert(DataType SourType, object SourData, DataType DestType, object DestData)
+
+	public int SetDataBit(int Data, short Bit, bool SetVal)
+
+	public bool GetDataBit(int Data, short Bit)

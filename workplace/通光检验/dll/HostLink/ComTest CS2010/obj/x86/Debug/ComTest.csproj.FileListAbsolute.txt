@@ -1,0 +1,11 @@
+J:\ttemp\OM COM VB10 160913\ComTest CS2010\bin\Debug\ComTest.exe
+J:\ttemp\OM COM VB10 160913\ComTest CS2010\bin\Debug\ComTest.pdb
+J:\ttemp\OM COM VB10 160913\ComTest CS2010\bin\Debug\ComTest.xml
+J:\ttemp\OM COM VB10 160913\ComTest CS2010\bin\Debug\FinsCom.dll
+J:\ttemp\OM COM VB10 160913\ComTest CS2010\obj\x86\Debug\ComTest.Form1.resources
+J:\ttemp\OM COM VB10 160913\ComTest CS2010\obj\x86\Debug\ComTest.Properties.Resources.resources
+J:\ttemp\OM COM VB10 160913\ComTest CS2010\obj\x86\Debug\ComTest.csproj.GenerateResource.Cache
+J:\ttemp\OM COM VB10 160913\ComTest CS2010\obj\x86\Debug\ComTest.exe
+J:\ttemp\OM COM VB10 160913\ComTest CS2010\obj\x86\Debug\ComTest.pdb
+D:\TEMP\OM COM VB10 160913\ComTest CS2010\obj\x86\Debug\ComTest.exe
+D:\TEMP\OM COM VB10 160913\ComTest CS2010\obj\x86\Debug\ComTest.pdb

@@ -1,0 +1,92 @@
+D:\TEMP\OM COM VB10 160913\ComTest CS2010\bin\Release\ComTest.exe
+D:\TEMP\OM COM VB10 160913\ComTest CS2010\bin\Release\ComTest.pdb
+D:\TEMP\OM COM VB10 160913\ComTest CS2010\bin\Release\ComTest.xml
+D:\TEMP\OM COM VB10 160913\ComTest CS2010\obj\x86\Release\ResolveAssemblyReference.cache
+D:\TEMP\OM COM VB10 160913\ComTest CS2010\obj\x86\Release\ComTest.Form1.resources
+D:\TEMP\OM COM VB10 160913\ComTest CS2010\obj\x86\Release\ComTest.Properties.Resources.resources
+D:\TEMP\OM COM VB10 160913\ComTest CS2010\obj\x86\Release\GenerateResource.read.1.tlog
+D:\TEMP\OM COM VB10 160913\ComTest CS2010\obj\x86\Release\GenerateResource.write.1.tlog
+D:\TEMP\OM COM VB10 160913\ComTest CS2010\obj\x86\Release\ComTest.exe
+D:\TEMP\OM COM VB10 160913\ComTest CS2010\obj\x86\Release\ComTest.pdb
+D:\TEMP\OM COM VB10 160913\ComTest CS2010\bin\Release\FinsCom.dll
+D:\TEMP\OM COM VB10 160913\ComTest CS2010\bin\Release\FinsCom.pdb
+D:\TEMP\OM COM VB10 160913\ComTest CS2010\bin\Release\FinsCom.xml
+J:\ttemp\OM COM VB10 160924\ComTest CS2010\obj\x86\Release\ComTest.exe
+J:\ttemp\OM COM VB10 160924\ComTest CS2010\obj\x86\Release\ComTest.pdb
+J:\ttemp\OM COM VB10 160924\ComTest CS2010\bin\Release\ComTest.exe
+J:\ttemp\OM COM VB10 160924\ComTest CS2010\bin\Release\ComTest.pdb
+J:\ttemp\OM COM VB10 160924\ComTest CS2010\bin\Release\ComTest.xml
+J:\ttemp\OM COM VB10 160924\ComTest CS2010\bin\Release\FinsCom.dll
+J:\ttemp\OM COM VB10 160924\ComTest CS2010\bin\Release\FinsCom.pdb
+J:\ttemp\OM COM VB10 160924\ComTest CS2010\bin\Release\FinsCom.xml
+J:\ttemp\OM COM VB10 160924\ComTest CS2010\obj\x86\Release\ComTest.csprojResolveAssemblyReference.cache
+J:\ttemp\OM COM VB10 160924\ComTest CS2010\obj\x86\Release\ComTest.Form1.resources
+J:\ttemp\OM COM VB10 160924\ComTest CS2010\obj\x86\Release\ComTest.Properties.Resources.resources
+J:\ttemp\OM COM VB10 160924\ComTest CS2010\obj\x86\Release\ComTest.csproj.GenerateResource.Cache
+J:\ttemp\OM COM VB10 160926\ComTest CS2010\bin\Release\ComTest.exe
+J:\ttemp\OM COM VB10 160926\ComTest CS2010\bin\Release\ComTest.pdb
+J:\ttemp\OM COM VB10 160926\ComTest CS2010\bin\Release\ComTest.xml
+J:\ttemp\OM COM VB10 160926\ComTest CS2010\obj\x86\Release\ComTest.Form1.resources
+J:\ttemp\OM COM VB10 160926\ComTest CS2010\obj\x86\Release\ComTest.Properties.Resources.resources
+J:\ttemp\OM COM VB10 160926\ComTest CS2010\obj\x86\Release\ComTest.csproj.GenerateResource.Cache
+J:\ttemp\OM COM VB10 160926\ComTest CS2010\obj\x86\Release\ComTest.exe
+J:\ttemp\OM COM VB10 160926\ComTest CS2010\obj\x86\Release\ComTest.pdb
+E:\TEMP FILE\OM HOSTLINK VB10 170222\ComTest CS2010\obj\x86\Release\ComTest.exe
+E:\TEMP FILE\OM HOSTLINK VB10 170222\ComTest CS2010\obj\x86\Release\ComTest.pdb
+E:\TEMP FILE\OM HOSTLINK VB10 170222\ComTest CS2010\obj\x86\Release\ComTest.Form1.resources
+E:\TEMP FILE\OM HOSTLINK VB10 170222\ComTest CS2010\obj\x86\Release\ComTest.Properties.Resources.resources
+E:\TEMP FILE\OM HOSTLINK VB10 170222\ComTest CS2010\obj\x86\Release\ComTest.csproj.GenerateResource.Cache
+E:\TEMP FILE\OM HOSTLINK VB10 170222\ComTest CS2010\bin\Release\ComTest.exe
+E:\TEMP FILE\OM HOSTLINK VB10 170222\ComTest CS2010\bin\Release\ComTest.pdb
+E:\TEMP FILE\OM HOSTLINK VB10 170222\ComTest CS2010\bin\Release\ComTest.xml
+E:\TEMP FILE\OM HOSTLINK VB10 170222\ComTest CS2010\bin\Release\HostLink.dll
+E:\TEMP FILE\OM HOSTLINK VB10 170222\ComTest CS2010\bin\Release\HostLink.pdb
+E:\TEMP FILE\OM HOSTLINK VB10 170222\ComTest CS2010\bin\Release\HostLink.xml
+C:\OM PROJ\OM HostLink VB10 170304\ComTest CS2010\obj\x86\Release\ComTest.exe
+C:\OM PROJ\OM HostLink VB10 170304\ComTest CS2010\obj\x86\Release\ComTest.pdb
+C:\OM PROJ\OM HostLink VB10 170304\ComTest CS2010\obj\x86\Release\ResolveAssemblyReference.cache
+C:\OM PROJ\OM HostLink VB10 170304\ComTest CS2010\obj\x86\Release\ComTest.Form1.resources
+C:\OM PROJ\OM HostLink VB10 170304\ComTest CS2010\obj\x86\Release\ComTest.Properties.Resources.resources
+C:\OM PROJ\OM HostLink VB10 170304\ComTest CS2010\obj\x86\Release\GenerateResource.read.1.tlog
+C:\OM PROJ\OM HostLink VB10 170304\ComTest CS2010\obj\x86\Release\GenerateResource.write.1.tlog
+C:\OM PROJ\OM HostLink VB10 170304\ComTest CS2010\bin\Release\ComTest.exe
+C:\OM PROJ\OM HostLink VB10 170304\ComTest CS2010\bin\Release\ComTest.pdb
+C:\OM PROJ\OM HostLink VB10 170304\ComTest CS2010\bin\Release\ComTest.xml
+G:\TTEMP\OM HostLink VB10 180117\ComTest CS2010\obj\x86\Release\ComTest.exe
+G:\TTEMP\OM HostLink VB10 180117\ComTest CS2010\obj\x86\Release\ComTest.pdb
+G:\TTEMP\OM HostLink VB10 180117\ComTest CS2010\bin\Release\ComTest.exe
+G:\TTEMP\OM HostLink VB10 180117\ComTest CS2010\bin\Release\ComTest.pdb
+G:\TTEMP\OM HostLink VB10 180117\ComTest CS2010\bin\Release\ComTest.xml
+G:\TTEMP\OM HostLink VB10 180117\ComTest CS2010\obj\x86\Release\ComTest.Form1.resources
+G:\TTEMP\OM HostLink VB10 180117\ComTest CS2010\obj\x86\Release\ComTest.Properties.Resources.resources
+G:\TTEMP\OM HostLink VB10 180117\ComTest CS2010\obj\x86\Release\ComTest.csproj.GenerateResource.Cache
+C:\Documents and Settings\All Users\Documents\OM HostLink VB10 180202\ComTest CS2010\obj\x86\Release\ComTest.exe
+C:\Documents and Settings\All Users\Documents\OM HostLink VB10 180202\ComTest CS2010\obj\x86\Release\ComTest.pdb
+C:\Documents and Settings\All Users\Documents\OM HostLink VB10 180202\ComTest CS2010\bin\Release\ComTest.exe
+C:\Documents and Settings\All Users\Documents\OM HostLink VB10 180202\ComTest CS2010\bin\Release\ComTest.pdb
+C:\Documents and Settings\All Users\Documents\OM HostLink VB10 180202\ComTest CS2010\bin\Release\ComTest.xml
+C:\Documents and Settings\All Users\Documents\OM HostLink VB10 180202\ComTest CS2010\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\All Users\Documents\OM HostLink VB10 180202\ComTest CS2010\obj\x86\Release\ComTest.Form1.resources
+C:\Documents and Settings\All Users\Documents\OM HostLink VB10 180202\ComTest CS2010\obj\x86\Release\ComTest.Properties.Resources.resources
+C:\Documents and Settings\All Users\Documents\OM HostLink VB10 180202\ComTest CS2010\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Documents and Settings\All Users\Documents\OM HostLink VB10 180202\ComTest CS2010\obj\x86\Release\GenerateResource.write.1.tlog
+I:\TTEMP\OM HostLink VB10 180317\ComTest CS2010\obj\x86\Release\ComTest.exe
+I:\TTEMP\OM HostLink VB10 180317\ComTest CS2010\obj\x86\Release\ComTest.pdb
+I:\TTEMP\OM HostLink VB10 180317\ComTest CS2010\obj\x86\Release\ResolveAssemblyReference.cache
+I:\TTEMP\OM HostLink VB10 180317\ComTest CS2010\obj\x86\Release\ComTest.Form1.resources
+I:\TTEMP\OM HostLink VB10 180317\ComTest CS2010\obj\x86\Release\ComTest.Properties.Resources.resources
+I:\TTEMP\OM HostLink VB10 180317\ComTest CS2010\obj\x86\Release\GenerateResource.read.1.tlog
+I:\TTEMP\OM HostLink VB10 180317\ComTest CS2010\obj\x86\Release\GenerateResource.write.1.tlog
+I:\TTEMP\OM HostLink VB10 180317\ComTest CS2010\bin\Release\ComTest.exe
+I:\TTEMP\OM HostLink VB10 180317\ComTest CS2010\bin\Release\ComTest.pdb
+I:\TTEMP\OM HostLink VB10 180317\ComTest CS2010\bin\Release\ComTest.xml
+K:\TTEMP\OM HostLink VB10 180323\ComTest CS2010\obj\x86\Release\ComTest.exe
+K:\TTEMP\OM HostLink VB10 180323\ComTest CS2010\obj\x86\Release\ComTest.pdb
+J:\TTEMP\OM HostLink VB10 180323\ComTest CS2010\obj\x86\Release\ComTest.exe
+J:\TTEMP\OM HostLink VB10 180323\ComTest CS2010\obj\x86\Release\ComTest.pdb
+J:\TTEMP\OM HostLink VB10 180323\ComTest CS2010\bin\Release\ComTest.exe
+J:\TTEMP\OM HostLink VB10 180323\ComTest CS2010\bin\Release\ComTest.pdb
+J:\TTEMP\OM HostLink VB10 180323\ComTest CS2010\bin\Release\ComTest.xml
+J:\TTEMP\OM HostLink VB10 180323\ComTest CS2010\obj\x86\Release\ComTest.Form1.resources
+J:\TTEMP\OM HostLink VB10 180323\ComTest CS2010\obj\x86\Release\ComTest.Properties.Resources.resources
+J:\TTEMP\OM HostLink VB10 180323\ComTest CS2010\obj\x86\Release\ComTest.csproj.GenerateResource.Cache
