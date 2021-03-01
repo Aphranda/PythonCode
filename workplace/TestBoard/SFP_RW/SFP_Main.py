@@ -13,7 +13,15 @@ from Ui_SFP import *
 from RemindUI import *
 from SFP_Core import *
 
+# 导入dll
+import TeraDll
+
 change = False
+
+cache01 = [
+    [b'#!\x00\x00\x00m\xec\x00\x00\x00\x00\x00\x00\x00\x01\x00\x01\x00\x01\x00\x01\r\x1f\r\x1b\r\x13\r\x10)P)C)*) $'], 
+    [b'#U\x00\xf6\x00F\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x8c\xa0qH\x88\xb8y\x18\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x180\x0ea\x15\xb7b\x1f\x00\x9eC\xe2\x01<\x1dL\x00\x00\x17p\x03\xe8b\x1f\x03gC\xe2\x06\xca$']
+    ]
 
 class Ter_show(QtCore.QThread):
     bit_show = QtCore.pyqtSignal()
@@ -44,7 +52,6 @@ class WorkThread(QtCore.QThread):
     """自定义信号"""
     receiver_data = QtCore.pyqtSignal()
     show_data = QtCore.pyqtSignal()
-    delete_data = QtCore.pyqtSignal()
 
     def run(self):
         """线程运行，执行代码"""
@@ -90,6 +97,9 @@ class MyWindow(QMainWindow, Ui_MainWindow):
         except Exception as e:
             print(e)
 
+        # 串口自动连接按钮
+
+
         # 线程连接代码，刷新测试数据
         try:
             self.workThread.receiver_data.connect(lambda: self.color_read(self.core.register_a2_sfp))
@@ -98,6 +108,9 @@ class MyWindow(QMainWindow, Ui_MainWindow):
             self.pushButton_OK.clicked.connect(self.work)
             self.pushButton_link_com.clicked.connect(self.signal_work)
             self.pushButton_sweep_auto_W.clicked.connect(self.signal_work)
+
+            self.pushButton_OK_Q.clicked.connect(self.color_qsfp)
+            self.pushButton_OK_Q.clicked.connect(self.digital_qsfp)
         except Exception as e:
             print(e)
 
@@ -126,37 +139,10 @@ class MyWindow(QMainWindow, Ui_MainWindow):
         # 模板复写
         self.pushButton_W.clicked.connect(self.product_write)
 
-        # 误码仪启动
-        self.pushButton_WMA__START.clicked.connect(self.ter_wan_start)
-
-        # 误码仪停止
-        self.pushButton_WMA__STOP.clicked.connect(self.ter_wan_stop)
-
-        # Tx Rx Pattern 模式写入
-        self.pushButton_WMA__START.clicked.connect(self.ter_wan_pattern)
-
-        # Tx Rx 传输速度写入
-        self.pushButton_WMA__START.clicked.connect(self.ter_wan_speed)
-
-        # 时钟频率写入
-        self.pushButton_WMA__START.clicked.connect(self.ter_clock_speed)
-
-        # 振幅写入
-        self.pushButton_WMA__START.clicked.connect(self.ter_wan_amp)
-
-        # 插入误码写入
-        self.pushButton_WMA__START.clicked.connect(self.ter_wan_error)
-
-        # 补偿写入
-        self.pushButton_WMA__START.clicked.connect(self.ter_wan_compensate)
-
         # ter_show线程实例化
         self.ter_show_thread = Ter_show()
 
         # 线程链接
-        self.ter_show_thread.bit_show.connect(self.ter_wan_show)
-        self.pushButton_WMA__START.clicked.connect(self.bit_work)
-
         # 工程师模式
         self.pushButton_SFPR.clicked.connect(self.version_read_A0)
 
@@ -197,6 +183,41 @@ class MyWindow(QMainWindow, Ui_MainWindow):
             self.remind_window.remindshow(self.com)
             print(self.com)
 
+    # def auto_connect(self):
+    #      """打开并检测端口，依据返回值进行排序整合"""
+    #     # 测试板系统
+    #     check_data = {
+    #         "B": [0x23, 0x07, 0x06, 0xA2, 0x00, 0x01, 0x24]
+    #     }
+    #     port_list = serial.tools.list_ports.comports()
+    #     for i in port_list:
+    #         port_sign.append(str(i).split("-", 1)[0].replace(" ", ""))
+    #     print(port_sign)
+
+    #     for j in port_sign:
+    #         self.serials_01 = serial.Serial(j, 9600, timeout=1)
+    #         self.serials_01.write(check_data["B"])
+    #         words = self.serials_01.read(size=10)
+    #         print(words)
+    #         if "#" not in str(words[0:5]):
+    #             self.serials_01.close()
+    #         else:
+    #             port_sign.remove(j)
+        
+    #     for k in port_sign:
+    #         self.serials_02 = serial.Serial(k, 9600, timeout=1)
+    #         self.serials_02.write(check_data["B"])
+    #         words = self.serials_02.read(size=10)
+    #         print(words)
+    #         if "#" not in str(words[0:5]):
+    #             self.serials_02.close()
+    #         else:
+    #             port_sign.remove(k)
+
+    #     # 误码仪系统
+    #     teradll = TeraDll.ErrorBit()
+    #     teradll.connect_apis()
+
     def signal_colors(self):
         """端口通讯提示灯条"""
         try:
@@ -229,6 +250,22 @@ class MyWindow(QMainWindow, Ui_MainWindow):
                 self.cache.append(self.receive_words)
         except Exception as e:
             self.remind_window.remindshow("数据发送失败" + str(e))
+    
+    def write_register_qsfp(self, value: dict):
+        """向寄存器A0中发送数据指令"""
+        data_127 = [0x23, 0x07, 0x07, 0xA0, 0x7f, 0x03, 0x24]
+        self.serials_board.write(data_127)
+        key = self.serials_board.readlines()
+        print(key)
+        try:
+            for i in value:
+                data = [0x23, 0x07, 0x06, 0xA0, int(i), int(value[i]), 0x24]
+                self.serials_board.write(data)
+                self.receive_words = self.serials_board.readlines()
+                print(self.receive_words)
+                self.cache.append(self.receive_words)
+        except Exception as e:
+            self.remind_window.remindshow("数据发送失败" + str(e)) 
 
     def write_data(self, value: list, key:str):
         """向模块芯片中写入信息"""
@@ -254,9 +291,6 @@ class MyWindow(QMainWindow, Ui_MainWindow):
         except Exception as e:
             print(e)
 
-    def write_bit_error(self):
-        """向误码仪中写入数据"""
-        pass
 
     def color_read(self, value: list):
         """门限颜色显示"""
@@ -272,6 +306,15 @@ class MyWindow(QMainWindow, Ui_MainWindow):
 
     def digital(self):
         """颜色显示"""
+        try:
+            print(self.core.threshold_dict)
+            self.lineEdit_Temp.setText(str(round(self.core.threshold_dict['Temperature'], 3)))
+            self.lineEdit_VCC.setText(str(round(self.core.threshold_dict['Vcc'], 3)))
+            self.lineEdit_Bias.setText(str(round(self.core.threshold_dict['Bias'], 3)))
+            self.lineEdit_TxP.setText(str(round(self.core.threshold_dict['TX Power'], 3)))
+            self.lineEdit_RxP.setText(str(round(self.core.threshold_dict['RX Power'], 3)))
+        except Exception as e:
+            print(e)
         line_edit = [
             "self.lineEdit_Temp", "self.lineEdit_VCC", "self.lineEdit_Bias", "self.lineEdit_TxP", "self.lineEdit_RxP", "self.lineEdit_OLT", "self.lineEdit_OTC"
             ]
@@ -306,6 +349,81 @@ class MyWindow(QMainWindow, Ui_MainWindow):
         del self.cache[:]
         del self.receive_words
         self.core.threshold_dict = {}
+
+    def color_qsfp(self):
+        # self.cache = cache01
+        try:
+            data = self.core.opposition_qsfp(self.cache)
+            print(data)
+        except Exception as e:
+            print(e)
+        
+    def digital_qsfp(self):
+        try:
+            self.lineEdit_Temp_Q.setText(str(round(self.core.threshold_qsfp['Temperature'], 2)))
+            self.lineEdit_VCC_Q.setText(str(round(self.core.threshold_qsfp['Vcc'], 2)))
+
+            self.lineEdit_TX1_Bias.setText(str(round(self.core.threshold_qsfp['TX1 Bias'], 2)))
+            self.lineEdit_TX2_Bias.setText(str(round(self.core.threshold_qsfp['TX2 Bias'], 2)))
+            self.lineEdit_TX3_Bias.setText(str(round(self.core.threshold_qsfp['TX3 Bias'], 2)))
+            self.lineEdit_TX4_Bias.setText(str(round(self.core.threshold_qsfp['TX4 Bias'], 2)))
+
+            self.lineEdit_TX1_Power.setText(str(round(self.core.threshold_qsfp['TX1 Power'], 2)))
+            self.lineEdit_TX2_Power.setText(str(round(self.core.threshold_qsfp['TX2 Power'], 2)))
+            self.lineEdit_TX3_Power.setText(str(round(self.core.threshold_qsfp['TX3 Power'], 2)))
+            self.lineEdit_TX4_Power.setText(str(round(self.core.threshold_qsfp['TX4 Power'], 2)))
+
+            self.lineEdit_RX1_Power.setText(str(round(self.core.threshold_qsfp['RX1 Power'], 2)))
+            self.lineEdit_RX2_Power.setText(str(round(self.core.threshold_qsfp['RX2 Power'], 2)))
+            self.lineEdit_RX3_Power.setText(str(round(self.core.threshold_qsfp['RX3 Power'], 2)))
+            self.lineEdit_RX4_Power.setText(str(round(self.core.threshold_qsfp['RX4 Power'], 2)))
+
+        except Exception as e:
+            print(e)
+        line_edit = [
+            'self.lineEdit_Temp_Q_1', 'self.lineEdit_Temp_Q_2', 'self.lineEdit_Temp_Q_3', 'self.lineEdit_Temp_Q_4', 
+            'self.lineEdit_VCC_Q_1', 'self.lineEdit_VCC_Q_2', 'self.lineEdit_VCC_Q_3', 'self.lineEdit_VCC_Q_4',
+            'self.lineEdit_Bias_Q_CH1_1', 'self.lineEdit_Bias_Q_CH2_1', 'self.lineEdit_Bias_Q_CH3_1', 'self.lineEdit_Bias_Q_CH4_1', 
+            'self.lineEdit_Bias_Q_CH1_2', 'self.lineEdit_Bias_Q_CH2_2', 'self.lineEdit_Bias_Q_CH3_2', 'self.lineEdit_Bias_Q_CH4_2', 
+            'self.lineEdit_Bias_Q_CH1_3', 'self.lineEdit_Bias_Q_CH2_3', 'self.lineEdit_Bias_Q_CH3_3', 'self.lineEdit_Bias_Q_CH4_3', 
+            'self.lineEdit_Bias_Q_CH1_4', 'self.lineEdit_Bias_Q_CH2_4', 'self.lineEdit_Bias_Q_CH3_4', 'self.lineEdit_Bias_Q_CH4_4',
+            'self.lineEdit_TXP_Q_CH1_1', 'self.lineEdit_TXP_Q_CH2_1', 'self.lineEdit_TXP_Q_CH3_1', 'self.lineEdit_TXP_Q_CH4_1', 
+            'self.lineEdit_TXP_Q_CH1_2', 'self.lineEdit_TXP_Q_CH2_2', 'self.lineEdit_TXP_Q_CH3_2', 'self.lineEdit_TXP_Q_CH4_2', 
+            'self.lineEdit_TXP_Q_CH1_3', 'self.lineEdit_TXP_Q_CH2_3', 'self.lineEdit_TXP_Q_CH3_3', 'self.lineEdit_TXP_Q_CH4_3', 
+            'self.lineEdit_TXP_Q_CH1_4', 'self.lineEdit_TXP_Q_CH2_4', 'self.lineEdit_TXP_Q_CH3_4', 'self.lineEdit_TXP_Q_CH4_4',
+            'self.lineEdit_RXP_Q_CH1_1', 'self.lineEdit_RXP_Q_CH2_1', 'self.lineEdit_RXP_Q_CH3_1', 'self.lineEdit_RXP_Q_CH4_1', 
+            'self.lineEdit_RXP_Q_CH1_2', 'self.lineEdit_RXP_Q_CH2_2', 'self.lineEdit_RXP_Q_CH3_2', 'self.lineEdit_RXP_Q_CH4_2', 
+            'self.lineEdit_RXP_Q_CH1_3', 'self.lineEdit_RXP_Q_CH2_3', 'self.lineEdit_RXP_Q_CH3_3', 'self.lineEdit_RXP_Q_CH4_3', 
+            'self.lineEdit_RXP_Q_CH1_4', 'self.lineEdit_RXP_Q_CH2_4', 'self.lineEdit_RXP_Q_CH3_4', 'self.lineEdit_RXP_Q_CH4_4'
+            ]
+        line_color = [
+            "background-color:green", "background-color:red"
+        ]
+        line_data = [
+            ['Temperature'], 
+            ['Vcc'], 
+            ['TX1 Bias', 'TX2 Bias', 'TX3 Bias', 'TX4 Bias'], 
+            ['TX1 Power', 'TX2 Power', 'TX3 Power', 'TX4 Power'], 
+            ['RX1 Power', 'RX2 Power', 'RX3 Power', 'RX4 Power'], 
+        ]
+        line_threshold = [
+            ['Temp High Alarm', 'Temp Low Alarm', 'Temp High Warning' , 'Temp Low Warning'],
+            ['Voltage High Alarm', 'Voltage Low Alarm', 'Voltage High Warning', 'Voltage Low Warning'],
+            ['Bias High Alarm' , 'Bias Low Alarm' , 'Bias High Warning' , 'Bias Low Warning'],
+            ['RX Power High Alarm' , 'RX Power Low Alarm', 'RX Power High Warning' , 'RX Power Low Warning'],
+            ['TX Power High Alarm', 'TX Power Low Alarm', 'TX Power High Warning', 'TX Power Low Warning']
+        ]
+        try:
+            item = self.core.classify_qsfp(line_data, line_threshold, self.core.threshold_qsfp, line_edit, line_color)
+            for i in item:
+                eval(i).setStyleSheet(item[i])
+        except Exception as e:
+            print(e)
+
+        del self.core.qsfp_22_57[:]
+        del self.core.qsfp_128_200[:]
+        del self.cache[:]
+        self.core.threshold_qsfp = {}
 
     def signal_work(self):
         """指示灯线程"""
@@ -377,7 +495,6 @@ class MyWindow(QMainWindow, Ui_MainWindow):
             self.comboBox_choose_register.addItem("High 128")
             self.comboBox_read_register.addItem("Low  128")
             self.comboBox_read_register.addItem("High 128")
-        pass
 
     def file_choose(self):
         """文件选择"""
@@ -446,278 +563,6 @@ class MyWindow(QMainWindow, Ui_MainWindow):
             del self.cache[:]
         except Exception as e:
             print(e)
-
-    def ter_wan_start(self):
-        """误码仪启动"""
-        try:
-            key_words = "0xff"
-            trans_data = [0x7e, 0x10, 0x80, 0x00, 0x03, 0x01, 0x00, 0x00, 0x00, 0x7e]
-            trans_len = sum(trans_data[1:-2])
-            trans_data[-2] = trans_len
-            receive_data = self.write_data_wm(trans_data)
-            print("启动返回值", receive_data)
-            if key_words in str(receive_data) or len(receive_data) == 0:
-                print("启动设置失败")
-            else:
-                print("启动设置成功")
-        except Exception as e:
-            print("start", e)
-        
-    def ter_wan_stop(self):
-        """误码仪停止"""
-        try:
-            key_words = "0xff"
-            trans_data = [0x7e, 0x10, 0x80, 0x00, 0x03, 0x01, 0x00, 0x01, 0x00, 0x7e]
-            trans_len = sum(trans_data[1:-2])
-            trans_data[-2] = trans_len
-            receive_data = self.write_data_wm(trans_data)
-            print("停止返回值", receive_data)
-            if key_words in str(receive_data) or len(receive_data) == 0:
-                self.remind_window.remindshow("停止设置失败")
-            else:
-                self.remind_window.remindshow("停止设置成功")
-        except Exception as e:
-            print("stop", e)
-     
-    def ter_wan_pattern(self):
-        """误码仪Pattern类型"""
-        try:
-            example = {
-                "PRBS07": 0x00,
-                "PRBS09": 0x01,
-                "PRBS11": 0x02,
-                "PRBS15": 0x03,
-                "PRBS23": 0x04,
-                "PRBS31": 0x05,
-                "PRBSSW": 0x06,
-            }
-            pattern_data_key = self.comboBox_WMA_Pattern.currentText()
-            pattern_data_value = example[pattern_data_key]
-            key_words = "0xff"
-            trans_data = [0x7e, 0x10, 0x82, 0x00, 0x03, 0x01, 0x00, pattern_data_value, 0x00, 0x7e]
-            trans_len = sum(trans_data[1:-2])
-            trans_data[-2] = trans_len
-            print("模式", trans_data)
-            receive_data = self.write_data_wm(trans_data)
-            print("模式返回值", receive_data)
-            if key_words in str(receive_data) or len(receive_data) == 0:
-                print("模式设置失败")
-            else:
-                print("模式设置成功")
-        except Exception as e:
-            print("pattern" + str(e))
-
-    def ter_wan_speed(self):
-        try:
-            example = {
-                "9.95G": 0x00,
-                "10.31G": 0x01,
-                "11.31G": 0x02,
-                "12.16G": 0x03,
-                "14.02G": 0x04,
-                "22.77G": 0x05,
-                "24.33G": 0x06,
-                "25.78G": 0x07,
-                "27.95G": 0x08,
-                "28.05G": 0x09,
-            }
-            pattern_data_key = self.comboBox_WMA_Pattern_V.currentText()
-            pattern_data_value = example[pattern_data_key]
-            key_words = "0xff"
-            trans_data = [0x7e, 0x10, 0x84, 0x00, 0x03, 0x01, 0x00, pattern_data_value, 0x00, 0x7e]
-            trans_len = sum(trans_data[1:-2])
-            trans_data[-2] = trans_len
-            print("速度", trans_data)
-            receive_data = self.write_data_wm(trans_data)
-            print("速度返回值", receive_data)
-            if key_words in str(receive_data) or len(receive_data) == 0:
-                print("速度设置失败")
-            else:
-                print("速度设置成功")
-        except Exception as e:
-            print("pattern" + str(e))
-    
-    def ter_clock_speed(self):
-        try:
-            example = {
-                "8bit": 0x00,
-                "16bit": 0x01,
-                "off": 0x02
-            }
-            pattern_data_key = self.comboBox_WMA_Pattern_HM.currentText()
-            pattern_data_value = example[pattern_data_key]
-            key_words = "0xff"
-            trans_data = [0x7e, 0x10, 0x88, 0x00, 0x03, 0x01, 0x00, pattern_data_value, 0x00, 0x7e]
-            trans_len = sum(trans_data[1:-2])
-            trans_data[-2] = trans_len
-            print("时钟", trans_data)
-            receive_data = self.write_data_wm(trans_data)
-            print("时钟返回值", receive_data)
-            if key_words in str(receive_data) or len(receive_data) == 0:
-                print("时钟设置失败")
-            else:
-                print("时钟设置成功")
-        except Exception as e:
-            print("pattern" + str(e))
-
-    def ter_wan_amp(self):
-        try:
-            example = {
-                "0mV": 0x00,
-                "250mV": 0x01,
-                "500mV": 0x02,
-                "750mV": 0x03,
-                "1000mV": 0x04
-            }
-            key_words = "0xff"
-            pattern_data_CH1 = self.comboBox_WMA_ZF_CH1.currentText()
-            pattern_data_value_CH1 = example[pattern_data_CH1]
-            trans_data_CH1 = [0x7e, 0x10, 0x8A, 0x00, 0x03, 0x01, 0x00, pattern_data_value_CH1, 0x00, 0x7e]
-
-            pattern_data_CH2 = self.comboBox_WMA_ZF_CH2.currentText()
-            pattern_data_value_CH2 = example[pattern_data_CH2]
-            trans_data_CH2 = [0x7e, 0x10, 0x8A, 0x00, 0x03, 0x01, 0x01, pattern_data_value_CH2, 0x00, 0x7e]
-
-            pattern_data_CH3 = self.comboBox_WMA_ZF_CH3.currentText()
-            pattern_data_value_CH3 = example[pattern_data_CH3]
-            trans_data_CH3 = [0x7e, 0x10, 0x8A, 0x00, 0x03, 0x01, 0x02, pattern_data_value_CH3, 0x00, 0x7e]
-
-            pattern_data_CH4 = self.comboBox_WMA_ZF_CH4.currentText()
-            pattern_data_value_CH4 = example[pattern_data_CH4]
-            trans_data_CH4 = [0x7e, 0x10, 0x8A, 0x00, 0x03, 0x01, 0x03, pattern_data_value_CH4, 0x00, 0x7e]
-
-            trans_data = [trans_data_CH1, trans_data_CH2, trans_data_CH3, trans_data_CH4]
-            for i in trans_data:
-                trans_len = sum(i[1:-2])
-                i[-2] = trans_len
-                print("振幅", i)
-                receive_data = self.write_data_wm(i)
-                print("振幅返回值", receive_data)
-                if key_words in str(receive_data) or len(receive_data) == 0:
-                    print(f"CH{i[6] + 1}设置失败")
-                else:
-                    print(f"CH{i[6] + 1}设置成功")
-        except Exception as e:
-            print("pattern" + str(e))
-    
-    def ter_wan_error(self):
-        try:
-            example = {
-                "0": 0x00,
-                "1": 0x01
-            }
-            key_words = "0xff"
-            pattern_data_CH1 = self.comboBox_WMA_ERROR_CH1.currentText()
-            pattern_data_value_CH1 = example[pattern_data_CH1]
-            trans_data_CH1 = [0x7e, 0x10, 0x88, 0x00, 0x03, 0x01, 0x00, pattern_data_value_CH1, 0x00, 0x7e]
-
-            pattern_data_CH2 = self.comboBox_WMA_ERROR_CH2.currentText()
-            pattern_data_value_CH2 = example[pattern_data_CH2]
-            trans_data_CH2 = [0x7e, 0x10, 0x88, 0x00, 0x03, 0x01, 0x01, pattern_data_value_CH2, 0x00, 0x7e]
-
-            pattern_data_CH3 = self.comboBox_WMA_ERROR_CH3.currentText()
-            pattern_data_value_CH3 = example[pattern_data_CH3]
-            trans_data_CH3 = [0x7e, 0x10, 0x88, 0x00, 0x03, 0x01, 0x02, pattern_data_value_CH3, 0x00, 0x7e]
-
-            pattern_data_CH4 = self.comboBox_WMA_ERROR_CH4.currentText()
-            pattern_data_value_CH4 = example[pattern_data_CH4]
-            trans_data_CH4 = [0x7e, 0x10, 0x88, 0x00, 0x03, 0x01, 0x03, pattern_data_value_CH4, 0x00, 0x7e]
-
-            trans_data = [trans_data_CH1, trans_data_CH2, trans_data_CH3, trans_data_CH4]
-            for i in trans_data:
-                trans_len = sum(i[1:-2])
-                i[-2] = trans_len
-                print("误码", i)
-                receive_data = self.write_data_wm(i)
-                if key_words in str(receive_data) or len(receive_data) == 0:
-                    print(f"CH{i[6] + 1}设置失败")
-                else:
-                    print(f"CH{i[6] + 1}设置成功")
-        except Exception as e:
-            print("pattern" + str(e))
-
-    def ter_wan_compensate(self):
-        try:
-            example = {
-                "-1.0dB": 0x00,
-                "-0.5dB": 0x01,
-                "0dB": 0x02,
-                "0.5dB": 0x03,
-                "1.0dB": 0x04,
-                "1.5dB": 0x05,
-                "2.0dB": 0x06,
-                "2.5dB": 0x07,
-            }
-            key_words = "0xff"
-            pattern_data_CH1 = self.comboBox_WMA_BC_CH1.currentText()
-            pattern_data_value_CH1 = example[pattern_data_CH1]
-            trans_data_CH1 = [0x7e, 0x10, 0x8C, 0x00, 0x03, 0x01, 0x00, pattern_data_value_CH1, 0x00, 0x7e]
-
-            pattern_data_CH2 = self.comboBox_WMA_BC_CH2.currentText()
-            pattern_data_value_CH2 = example[pattern_data_CH2]
-            trans_data_CH2 = [0x7e, 0x10, 0x8C, 0x00, 0x03, 0x01, 0x01, pattern_data_value_CH2, 0x00, 0x7e]
-
-            pattern_data_CH3 = self.comboBox_WMA_BC_CH3.currentText()
-            pattern_data_value_CH3 = example[pattern_data_CH3]
-            trans_data_CH3 = [0x7e, 0x10, 0x8C, 0x00, 0x03, 0x01, 0x02, pattern_data_value_CH3, 0x00, 0x7e]
-
-            pattern_data_CH4 = self.comboBox_WMA_BC_CH4.currentText()
-            pattern_data_value_CH4 = example[pattern_data_CH4]
-            trans_data_CH4 = [0x7e, 0x10, 0x8C, 0x00, 0x03, 0x01, 0x03, pattern_data_value_CH4, 0x00, 0x7e]
-
-            trans_data = [trans_data_CH1, trans_data_CH2, trans_data_CH3, trans_data_CH4]
-            for i in trans_data:
-                trans_len = sum(i[1:-2])
-                i[-2] = trans_len
-                print("补偿", i)
-                receive_data = self.write_data_wm(i)
-                print(receive_data)
-                if key_words in str(receive_data) or len(receive_data) == 0:
-                    print(f"CH{i[6] + 1}设置失败")
-                else:
-                    print(f"CH{i[6] + 1}设置成功")
-        except Exception as e:
-            print("pattern" + str(e))       
-
-    def ter_wan_lock(self):
-        try:
-            trans_data = [0x7e, 0x10, 0x02, 0x00, 0x00, 0x12, 0x7e]
-            trans_len = sum(trans_data[1:-2])
-            trans_data[-2] = trans_len
-            receive_data = self.write_data_wm(trans_data)
-            print("lock", receive_data)
-            return receive_data
-        except Exception as e:
-            print("lock", e)
-
-    def ter_wan_exist(self):
-        try:
-            trans_data = [0x7e, 0x10, 0x06, 0x00, 0x00, 0x16, 0x7e]
-            trans_len = sum(trans_data[1:-2])
-            trans_data[-2] = trans_len
-            receive_data = self.write_data_wm(trans_data)
-            print("lock", receive_data)
-            return receive_data
-        except Exception as e:
-            print("lock", e)      
-
-    def ter_wan_rate(self):
-        try:
-            trans_data = [0x7e, 0x10, 0x08, 0x00, 0x00, 0x18, 0x7e]
-            trans_len = sum(trans_data[1:-2])
-            trans_data[-2] = trans_len
-            receive_data = self.write_data_wm(trans_data)
-            print("rate", receive_data)
-            return receive_data
-        except Exception as e:
-            print("rate", e) 
-
-    def ter_wan_show(self):
-        a = self.ter_wan_lock()
-        b = self.ter_wan_exist()
-        c = self.ter_wan_rate()
-        print("A" + str(a) + "\n" + "B" + str(b) + "\n" + "C" + str(c))
-
 
     def product_write(self):
         """数据码复写"""
@@ -813,7 +658,8 @@ class MyWindow(QMainWindow, Ui_MainWindow):
             del self.cache[:]
         except Exception as e:
             print(e)
-    
+
+
 class Remindwindow(QtWidgets.QDialog, Ui_Remind):
     def __init__(self, parent=None):
         super(Remindwindow, self).__init__(parent)

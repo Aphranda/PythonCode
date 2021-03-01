@@ -194,3 +194,178 @@ try:
         #     self.opposition = 0
         # except Exception as e:
         #     print(e)
+
+
+
+        
+PS D:\PythonCode\code> conda activate python
+PS D:\PythonCode\code> & D:/Anaconda/envs/python/python.exe d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py
+Traceback (most recent call last):
+  File "d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py", line 35, in <module>
+    g = b.BertReadRxErr(1,0)
+TypeError: No method matches given arguments for BertReadRxErr
+tDll, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+False
+False
+False
+tDll, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+False
+False
+False
+tDll, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+False
+False
+False
+tDll, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+False
+False
+False
+PS D:\PythonCode\code> & D:/Anaconda/envs/python/python.exe d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py
+False
+False
+False
+PS D:\PythonCode\code> & D:/Anaconda/envs/python/python.exe d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py
+tDll, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+False
+False
+PS D:\PythonCode\code> & D:/Anaconda/envs/python/python.exe d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py
+tDll, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+True
+False
+PS D:\PythonCode\code> & D:/Anaconda/envs/python/python.exe d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py
+tDll, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Traceback (most recent call last):
+  File "d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py", line 35, in <module>
+    g = b.BertReadTxRuning(1,0)
+TypeError: No method matches given arguments for BertReadTxRuning
+PS D:\PythonCode\code> & D:/Anaconda/envs/python/python.exe d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py
+tDll, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Traceback (most recent call last):
+  File "d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py", line 35, in <module>
+    g = b.BertReadTxRuning()
+TypeError: No method matches given arguments for BertReadTxRuning
+PS D:\PythonCode\code> & D:/Anaconda/envs/python/python.exe d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py
+tDll, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Traceback (most recent call last):
+  File "d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py", line 35, in <module>
+    g = b.BoardReadTemp()
+TypeError: No method matches given arguments for BoardReadTemp
+PS D:\PythonCode\code> & D:/Anaconda/envs/python/python.exe d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py
+tDll, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Traceback (most recent call last):
+  File "d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py", line 36, in <module>
+    g = b.BoardReadTemp(num)
+TypeError: No method matches given arguments for BoardReadTemp
+PS D:\PythonCode\code>
+
+
+
+PS D:\PythonCode\code> & D:/Anaconda/envs/python/python.exe d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py
+15
+0
+15
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+System.Byte[]
+System.Byte[]
+PS D:\PythonCode\code> & D:/Anaconda/envs/python/python.exe d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py
+False True
+15
+0
+15
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+System.Byte[]
+System.Byte[]
+PS D:\PythonCode\code> & D:/Anaconda/envs/python/python.exe d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py
+False True
+lock: 15
+running: 0
+15
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+System.Byte[]
+System.Byte[]
+PS D:\PythonCode\code> & D:/Anaconda/envs/python/python.exe d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py
+False True
+lock: 15
+running: 0
+err: 15
+ber: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+AMP: System.Byte[]
+emp: System.Byte[]
+PS D:\PythonCode\code> & D:/Anaconda/envs/python/python.exe d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py
+False True
+cfg: [0, 0, 7, 0, 3]
+lock: 15
+running: 0
+ber: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+AMP: [4, 4, 4, 4]
+emp: 2
+PS D:\PythonCode\code> & D:/Anaconda/envs/python/python.exe d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py
+False True
+cfg: [0, 0, 7, 0, 3]
+lock: 15
+running: 0
+Traceback (most recent call last):
+  File "d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py", line 74, in <module>
+    main()
+  File "d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py", line 63, in main
+    b.append(hex(j))
+TypeError: 'float' object cannot be interpreted as an integer
+PS D:\PythonCode\code> & D:/Anaconda/envs/python/python.exe d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py
+False True
+lock: 15
+running: 0
+err: 15
+ber: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+AMP: ['0x4', '0x4', '0x4', '0x4']
+emp: 2
+PS D:\PythonCode\code> & D:/Anaconda/envs/python/python.exe d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py
+False True
+lock: 15
+running: 0
+err: 15
+ber: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+AMP: ['0x4', '0x4', '0x4', '0x4']
+emp: 2
+PS D:\PythonCode\code> & D:/Anaconda/envs/python/python.exe d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py
+False True
+lock: 15
+running: 0
+err: 15
+ber: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+AMP: ['0x4', '0x4', '0x4', '0x4']
+emp: ['0x2', '0x2', '0x2', '0x2']
+PS D:\PythonCode\code> & D:/Anaconda/envs/python/python.exe d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py
+False True
+lock: 15
+running: 0
+err: 15
+ber: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+AMP: ['0x4', '0x4', '0x4', '0x4']
+emp: ['0x2', '0x2', '0x2', '0x2']
+PS D:\PythonCode\code> & D:/Anaconda/envs/python/python.exe d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py
+False True
+lock: 15
+running: 0
+err: 15
+ber: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+AMP: ['0x4', '0x4', '0x4', '0x4']
+emp: ['0x2', '0x2', '0x2', '0x2']
+PS D:\PythonCode\code> & D:/Anaconda/envs/python/python.exe d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py
+False True
+cfg: ['0x0', '0x0', '0x7', '0x0', '0x3']
+lock: 15
+running: 0
+err: 15
+ber: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+AMP: ['0x4', '0x4', '0x4', '0x4']
+emp: ['0x2', '0x2', '0x2', '0x2']
+PS D:\PythonCode\code> & D:/Anaconda/envs/python/python.exe d:/PythonCode/code/workplace/TestBoard/SFP_RW/dll/dll.py
+False True
+cfg: ['0x0', '0x0', '0x7', '0x0', '0x3']
+lock: 15
+running: 0
+err: 15
+ber: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+AMP: ['0x4', '0x4', '0x4', '0x4']
+emp: ['0x2', '0x2', '0x2', '0x2']
+PS D:\PythonCode\code>

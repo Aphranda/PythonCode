@@ -17,7 +17,13 @@
 #     b.append(c)
 #
 # print(b)
-import math
+# import math
+#
+# a = 0
+# print(math.log10(6.5536))
+cache = b''
+a = [b'#+\x00\x00\x00o^\x00\x00\x00\x00\x00\x00\x00\x01\x00\x01\x00\x01\x00\x01\n', b'\x1e\t\xdf\t\xe2\n', b'(0%.\xf9/\x080U$']
+for i, n in enumerate(a):
+    cache = cache + n
 
-a = 0
-print(math.log10(6.5536))
+print(cache, len(cache))

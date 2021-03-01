@@ -62,6 +62,8 @@ cache01 = [
     [b'#\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff$']
 
 ]
+cache02 = [[b'#\x16\x00\x00\x00vR\x00\x00\x00\x00\x00\x00\x00\x01\x00\x01\x00\x01\x00\x01\r\x16\r\x13\r\x0f\r\x0c)3)*)\x1d)\x14$'], [b'#U\x00\xf6\x00F\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x8c\xa0qH\x88\xb8y\x18\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x180\x0ea\x15\xb7b\x1f\x00\x9eC\xe2\x01<\x1dL\x00\x00\x17p\x03\xe8b\x1f\x03gC\xe2\x06\xca$']]
+
 
 
 class Core(object):
@@ -267,10 +269,8 @@ class Core(object):
         self.match_t(optional_name[0:1], self.optional_106_109[0:2], self.threshold_dict)
         # TEC电流匹配提取
         self.match_e(optional_name[1:2], self.optional_106_109[2:4], self.threshold_dict)
-        print(self.optional_106_109, self.threshold_40_55)
-        # for i in self.threshold_dict:
-        #     print(i + " : " + str(self.threshold_dict[i]))
-        # print(self.threshold_dict["Temperature"])
+
+        print(self.threshold_dict)
         return self.threshold_dict
 
     # def clear_data(self):
@@ -283,10 +283,10 @@ class Core(object):
     #     print(self.threshold_dict)
 
 
-# def main():
-#     core = Core()
-#     core.opposition_data(cache01)
+def main():
+    core = Core()
+    core.opposition_data(cache01)
 
 
-# if __name__ == '__main__':
-#     main()
+if __name__ == '__main__':
+    main()

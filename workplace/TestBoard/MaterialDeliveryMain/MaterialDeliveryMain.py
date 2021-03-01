@@ -56,6 +56,7 @@ class MyWindow(QMainWindow, Ui_MainWindow):
         self.pushButton_exit.clicked.connect(self.on_pushbutton_exit)         #退出信号
         self.pushButton_sweep_com.clicked.connect(self.on_pushbutton_sweep)   #搜索串口
         self.pushButton_link_com.clicked.connect(self.on_pushbutton_link)     #连接串口
+        self.pushButton_sweep_com.clicked.connect(self.file)
 
     def on_pushbutton_exit(self):
         """窗口关闭"""
@@ -117,6 +118,8 @@ class MyWindow(QMainWindow, Ui_MainWindow):
         self.write_register(self.register_a0_sfp)
         self.receive_register()
 
+    def file(self):
+        QtWidgets.QFileDialog.getExistingDirectory()
  
 class Remindwindow(QtWidgets.QDialog, Ui_Remind):
     def __init__(self, parent=None):

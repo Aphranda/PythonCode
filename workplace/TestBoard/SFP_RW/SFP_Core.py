@@ -1,7 +1,11 @@
 import threading
 import math
 
-
+cache01 = [
+    [b'#!\x00\x00\x00m\xec\x00\x00\x00\x00\x00\x00\x00\x01\x00\x01\x00\x01\x00\x01\r\x1f\r\x1b\r\x13\r\x10)P)C)*) $'], 
+    [b'#U\x00\xf6\x00F\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x8c\xa0qH\x88\xb8y\x18\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x180\x0ea\x15\xb7b\x1f\x00\x9eC\xe2\x01<\x1dL\x00\x00\x17p\x03\xe8b\x1f\x03gC\xe2\x06\xca$']
+    ]
+print(len(cache01[0][0]))
 class Core(object):
     def __init__(self):
         self.register_a0_sfp = {
@@ -21,13 +25,21 @@ class Core(object):
             "96": "10",
             "106": "4"
         }
-        self.register_a0_qsfp = {}
-        self.register_a2_qsfp = {}
+        self.register_qsfp_128 = {
+            "22": "36", # 温度显示22-23 电压显示值26-27 RX功率34-41 TX电流42-49 TX功率50-57
+            "128": "72" # 门限值在page0
+            # Temp：128-135 VCC：144-151 RXPower：176-183 TX Bias：184-191  TXPower：192-199
+        }
         self.threshold_0_39 = []
         self.threshold_40_55 = []
         self.present_96_105 = []
         self.optional_106_109 = []
         self.threshold_dict = {}
+
+        # qsfp区域
+        self.qsfp_22_57 = []
+        self.qsfp_128_200 = []
+        self.threshold_qsfp = {}
 
     @staticmethod
     def scale_t(high, low):
@@ -182,6 +194,58 @@ class Core(object):
 
         return self.threshold_dict
     
+    def opposition_qsfp(self, data):
+        aw_thresholds = [
+            'Temp High Alarm', 'Temp Low Alarm', 'Temp High Warning', 'Temp Low Warning',
+            'Voltage High Alarm', 'Voltage Low Alarm', 'Voltage High Warning', 'Voltage Low Warning',
+            'Bias High Alarm', 'Bias Low Alarm', 'Bias High Warning', 'Bias Low Warning',
+            'TX Power High Alarm', 'TX Power Low Alarm', 'TX Power High Warning', 'TX Power Low Warning',
+            'RX Power High Alarm', 'RX Power Low Alarm', 'RX Power High Warning', 'RX Power Low Warning'
+            ]
+        present_name = ['Temperature', "Vcc", 'TX1 Bias', 'TX2 Bias', 'TX3 Bias', 'TX4 Bias', 'TX1 Power', 'TX2 Power', 'TX3 Power', 'TX4 Power', 'RX1 Power', "RX2 Power", "RX3 Power", "RX4 Power"]
+
+        # 实时数据解码
+        self.threshold_decode(data[0], self.qsfp_22_57)
+        # 门限数据解码
+        self.threshold_decode(data[1], self.qsfp_128_200)
+  
+
+        # 实际数据匹配提取
+        # 温度数据提取
+        self.match_t(present_name[0:1], self.qsfp_22_57[0:2], self.threshold_qsfp)
+
+        # 电压数据提取
+        self.match_v(present_name[1:2], self.qsfp_22_57[4:6], self.threshold_qsfp)
+
+        # TXBias提取
+        self.match_c(present_name[2:6], self.qsfp_22_57[20:28], self.threshold_qsfp)
+
+        # TXPower提取
+        self.match_p(present_name[6:10], self.qsfp_22_57[28:36], self.threshold_qsfp)
+
+        # RXPower提取
+        self.match_p(present_name[10:14], self.qsfp_22_57[12:20], self.threshold_qsfp)
+
+        # 门限数据匹配提取
+        # 温度门限
+        self.match_t(aw_thresholds[0:4], self.qsfp_128_200[0:8], self.threshold_qsfp)
+
+        # 电压门限
+        self.match_v(aw_thresholds[4:8], self.qsfp_128_200[16:24], self.threshold_qsfp)
+
+        # RXPower门限
+        self.match_p(aw_thresholds[16:20], self.qsfp_128_200[48:56], self.threshold_qsfp)
+
+        # TXBias门限
+        self.match_c(aw_thresholds[8:12], self.qsfp_128_200[56:64], self.threshold_qsfp)
+
+        # TXPower门限
+        self.match_p(aw_thresholds[12:16], self.qsfp_128_200[64:72], self.threshold_qsfp)
+
+        print(self.threshold_qsfp)
+
+        return self.threshold_qsfp
+
     @staticmethod
     def classify(key, value, data, line, color):
         box = []
@@ -226,6 +290,46 @@ class Core(object):
                 item[line[i] + "_" + str(p)] = n[p-1]
         return item
 
+    @staticmethod
+    def classify_qsfp(key, value, data, line, color):
+        box = {}
+        boxes = []
+        item = []
+        items = {}
+        for i in range(5):
+            for j in range(4):
+                box[value[i][j]] = key[i]
+        for m in box:
+            for n in box[m]:
+                if data[n] > data[m]:
+                    boxes.append(0)
+                else:
+                    boxes.append(1)
+        for i in range(1,5):
+            if boxes[0:8][2*i-2] == 1:
+                item.append(color[0])
+            else:
+                item.append(color[1])
+            if boxes[0:8][2*i-1] == 0:
+                item.append(color[0])
+            else:
+                item.append(color[1])
+        for j in range(0,11,2):
+            for s in boxes[8:56][4*j:4*j+4]:
+
+                if s == 0:
+                    item.append(color[1])
+                else:
+                    item.append(color[0])
+        for k in range(1,13,2):
+            for s in boxes[8:56][4*k:4*k+4]:
+                if s == 1:
+                    item.append(color[1])
+                else:
+                    item.append(color[0])
+        for i, n in enumerate(item):
+            items[line[i]] = n
+        return items
 
     @staticmethod
     def opposition_info(value: list):
@@ -284,11 +388,11 @@ class Core(object):
         return item
 
 
-# def main():
-#
-#     core = Core()
-#     core.hex_decode(value="9f")
-#
-#
-# if __name__ == '__main__':
-#     main()
+def main():
+
+    core = Core()
+    core.opposition_qsfp(cache01)
+
+
+if __name__ == '__main__':
+    main()
